@@ -108,18 +108,20 @@
 | Repository | 역할 | 먼저 볼 문서 |
 |---|---|---|
 | **[`PSP`](https://github.com/nanimnoworry/PSP)** | **공식 프로젝트 허브 · 최종 제출/발표 SSOT** | `README.md` → `docs/model_lineage.md` → final artifact manifest |
-| [`planB`](https://github.com/nanimnoworry/planB) | 제출 이후의 모델 연구 · 강건성 검증 | `START_HERE.md` → `docs/RESEARCH_SCOPE.md` → `docs/STAGE_INDEX.md` |
+| [`planB`](https://github.com/nanimnoworry/planB) | 제출 이후의 모델 연구 · 강건성 검증 | `README.md` → `START_HERE.md` → `docs/RESEARCH_SCOPE.md` |
 | [`Research-Papers`](https://github.com/nanimnoworry/Research-Papers) | 임상·문헌 근거 · APA reference · 발표자료 archive | `README.md` → `FINAL_PRESENTATION_MANIFEST.md` |
 
 ```text
-PSP
- └─ official final history
-      └─ planB
-          └─ post-submission research
-
-Research-Papers
- └─ evidence / references / presentations
+                 PSP
+       official project SSOT
+              /       \
+             /         \
+        planB       Research-Papers
+ post-submission    evidence / references
+     research       / presentations
 ```
+
+세 저장소는 하나의 프로젝트를 공유하지만 역할은 분리합니다. `planB`는 공식 Final을 대체하지 않는 후속 모델 연구이고, `Research-Papers`는 모델 실행 저장소가 아니라 근거·발표 artifact 아카이브입니다.
 
 ---
 
@@ -143,9 +145,10 @@ Research-Papers
 
 1. **[`PSP`](https://github.com/nanimnoworry/PSP)** — 프로젝트 전체와 최종 결과
 2. **[`PSP/docs/model_lineage.md`](https://github.com/nanimnoworry/PSP/blob/main/docs/model_lineage.md)** — 공식 모델 계보
-3. **[`planB/START_HERE.md`](https://github.com/nanimnoworry/planB/blob/main/START_HERE.md)** — 후속 연구 진입점
-4. **[`planB/docs/STAGE_INDEX.md`](https://github.com/nanimnoworry/planB/blob/main/docs/STAGE_INDEX.md)** — Stage09~16 색인
-5. **[`Research-Papers`](https://github.com/nanimnoworry/Research-Papers)** — 임상·문헌·발표 근거
+3. **[`planB`](https://github.com/nanimnoworry/planB)** — 후속 연구 landing page
+4. **[`planB/START_HERE.md`](https://github.com/nanimnoworry/planB/blob/main/START_HERE.md)** — 후속 연구 탐색 순서
+5. **[`planB/docs/STAGE_INDEX.md`](https://github.com/nanimnoworry/planB/blob/main/docs/STAGE_INDEX.md)** — Stage09~16 색인
+6. **[`Research-Papers`](https://github.com/nanimnoworry/Research-Papers)** — 임상·문헌·발표 근거
 
 ---
 
