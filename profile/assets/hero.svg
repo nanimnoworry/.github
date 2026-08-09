@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">NANIM NO WORRY — Fertility AI Research</title>
+  <desc id="desc">Animated abstract visualization of clinical data flowing through ensemble models into a stable prediction.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071426"/>
+      <stop offset="0.52" stop-color="#102a43"/>
+      <stop offset="1" stop-color="#132238"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#60a5fa"/>
+      <stop offset="0.5" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#34d399"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="360" rx="28" fill="url(#bg)"/>
+  <circle cx="160" cy="90" r="92" fill="#2563eb" opacity="0.12">
+    <animate attributeName="r" values="82;102;82" dur="7s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1030" cy="270" r="118" fill="#8b5cf6" opacity="0.10">
+    <animate attributeName="r" values="108;128;108" dur="8s" repeatCount="indefinite"/>
+  </circle>
+
+  <g opacity="0.28" stroke="#93c5fd" stroke-width="1.4">
+    <path d="M65 278 C240 210 300 255 445 190 S720 125 900 190 S1060 200 1140 145" fill="none" stroke-dasharray="8 12">
+      <animate attributeName="stroke-dashoffset" values="0;-80" dur="6s" repeatCount="indefinite"/>
+    </path>
+    <path d="M90 300 C250 245 345 290 500 225 S735 160 890 215 S1040 235 1125 180" fill="none" stroke-dasharray="5 15">
+      <animate attributeName="stroke-dashoffset" values="0;-100" dur="8s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <g transform="translate(70 74)">
+    <text x="0" y="0" fill="#93c5fd" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="4">FERTILITY AI RESEARCH</text>
+    <text x="0" y="70" fill="#f8fafc" font-family="Arial, sans-serif" font-size="56" font-weight="800">NANIM NO WORRY</text>
+    <rect x="0" y="92" width="620" height="5" rx="3" fill="url(#accent)"/>
+    <text x="0" y="137" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="21">Clinical signals · OOF validation · ensemble diversity · reproducible evidence</text>
+    <text x="0" y="177" fill="#94a3b8" font-family="Arial, sans-serif" font-size="17">난임 환자 대상 임신 성공 여부 예측 프로젝트</text>
+  </g>
+
+  <g transform="translate(825 68)" filter="url(#glow)">
+    <circle cx="100" cy="100" r="72" fill="none" stroke="#60a5fa" stroke-width="3" opacity="0.75">
+      <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="14s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="100" cy="100" r="50" fill="none" stroke="#a78bfa" stroke-width="2.5" stroke-dasharray="16 8" opacity="0.8">
+      <animateTransform attributeName="transform" type="rotate" from="360 100 100" to="0 100 100" dur="10s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="100" cy="100" r="17" fill="#34d399" opacity="0.9">
+      <animate attributeName="opacity" values="0.55;1;0.55" dur="2.6s" repeatCount="indefinite"/>
+    </circle>
+    <g fill="#e2e8f0">
+      <circle cx="100" cy="28" r="5"/><circle cx="169" cy="78" r="5"/><circle cx="141" cy="160" r="5"/><circle cx="58" cy="160" r="5"/><circle cx="31" cy="78" r="5"/>
+    </g>
+  </g>
+
+  <g transform="translate(72 315)" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8">
+    <text x="0" y="0">Official final: Plan 3 · Submission AUC 0.74231</text>
+    <text x="535" y="0">Highest submitted AUC: Plan 2 · 0.74232</text>
+  </g>
+</svg>
