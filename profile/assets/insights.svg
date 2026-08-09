@@ -1,0 +1,121 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ibg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FCFEFF"/>
+      <stop offset="1" stop-color="#FBF8FF"/>
+    </linearGradient>
+    <filter id="ishadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#1E293B" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" rx="30" fill="url(#ibg)"/>
+
+  <text x="70" y="88" fill="#0F172A" font-size="42" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="800">
+    Key Insights
+  </text>
+  <text x="70" y="128" fill="#64748B" font-size="22" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+    최종 Notebook과 발표자료를 바탕으로 정리한 핵심 결과
+  </text>
+
+  <g filter="url(#ishadow)">
+    <rect x="70" y="180" width="460" height="640" rx="30" fill="#DFF4FF"/>
+    <text x="105" y="245" fill="#124E65" font-size="30" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="800">
+      01. BMI와 흡연 비율
+    </text>
+    <text x="105" y="286" fill="#335B6A" font-size="20" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+      BMI 구간이 높아질수록 흡연자 비율이 전반적으로 증가
+    </text>
+
+    <rect x="110" y="340" width="300" height="28" rx="14" fill="#B9E6FB"/>
+    <rect x="110" y="390" width="355" height="28" rx="14" fill="#90D8FA"/>
+    <rect x="110" y="440" width="375" height="28" rx="14" fill="#6CCBF9"/>
+    <rect x="110" y="490" width="412" height="28" rx="14" fill="#42B9F4"/>
+
+    <text x="110" y="333" fill="#335B6A" font-size="18" font-family="system-ui, -apple-system, Segoe UI, sans-serif">정상 30.6%</text>
+    <text x="110" y="383" fill="#335B6A" font-size="18" font-family="system-ui, -apple-system, Segoe UI, sans-serif">비만전단계 39.6%</text>
+    <text x="110" y="433" fill="#335B6A" font-size="18" font-family="system-ui, -apple-system, Segoe UI, sans-serif">1단계 비만 41.8%</text>
+    <text x="110" y="483" fill="#335B6A" font-size="18" font-family="system-ui, -apple-system, Segoe UI, sans-serif">2단계 비만 46.0%</text>
+
+    <text x="110" y="585" fill="#0F172A" font-size="54" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="800">
+      46.0%
+    </text>
+    <text x="110" y="625" fill="#475569" font-size="22" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+      2단계 비만 구간의 흡연자 비율
+    </text>
+    <text x="110" y="705" fill="#64748B" font-size="18" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+      * 3단계 비만도 확인되지만 표본 수가 매우 적어 해석에 주의가 필요함
+    </text>
+
+    <rect x="570" y="180" width="460" height="300" rx="30" fill="#FFF0D6"/>
+    <text x="605" y="245" fill="#7A5522" font-size="30" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="800">
+      02. 충치 발생 비율
+    </text>
+    <text x="605" y="286" fill="#8A6940" font-size="20" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+      흡연자 집단에서 충치 있음 비율이 더 높게 관찰됨
+    </text>
+
+    <rect x="610" y="340" width="160" height="90" rx="22" fill="#FFF8EE"/>
+    <text x="690" y="374" text-anchor="middle" fill="#8A6940" font-size="20" font-family="system-ui, -apple-system, Segoe UI, sans-serif">비흡연</text>
+    <text x="690" y="410" text-anchor="middle" fill="#7A5522" font-size="34" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="800">19.6%</text>
+
+    <rect x="820" y="340" width="160" height="90" rx="22" fill="#FFF8EE"/>
+    <text x="900" y="374" text-anchor="middle" fill="#8A6940" font-size="20" font-family="system-ui, -apple-system, Segoe UI, sans-serif">흡연</text>
+    <text x="900" y="410" text-anchor="middle" fill="#7A5522" font-size="34" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="800">28.2%</text>
+
+    <rect x="570" y="520" width="460" height="300" rx="30" fill="#EAE4FF"/>
+    <text x="605" y="585" fill="#53408D" font-size="30" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="800">
+      03. 평균 중성지방
+    </text>
+    <text x="605" y="626" fill="#685B9E" font-size="20" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+      흡연자 집단의 평균 중성지방 수치가 더 높게 나타남
+    </text>
+
+    <rect x="610" y="695" width="150" height="55" rx="18" fill="#F5F2FF"/>
+    <text x="685" y="730" text-anchor="middle" fill="#6A5CA1" font-size="24" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="700">113.45</text>
+
+    <rect x="820" y="675" width="150" height="75" rx="18" fill="#D9CFFF"/>
+    <text x="895" y="721" text-anchor="middle" fill="#4F3F94" font-size="28" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="800">150.40</text>
+
+    <text x="685" y="775" text-anchor="middle" fill="#685B9E" font-size="18" font-family="system-ui, -apple-system, Segoe UI, sans-serif">비흡연</text>
+    <text x="895" y="775" text-anchor="middle" fill="#685B9E" font-size="18" font-family="system-ui, -apple-system, Segoe UI, sans-serif">흡연</text>
+
+    <rect x="1070" y="180" width="460" height="640" rx="30" fill="#E5F8EE"/>
+    <text x="1105" y="245" fill="#215C40" font-size="30" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="800">
+      04. 해석 메모
+    </text>
+
+    <rect x="1105" y="300" width="390" height="118" rx="24" fill="#F7FFFB"/>
+    <text x="1135" y="345" fill="#215C40" font-size="21" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="700">
+      관찰된 경향
+    </text>
+    <text x="1135" y="380" fill="#437257" font-size="19" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+      • BMI 증가와 흡연 비율 증가 경향
+    </text>
+    <text x="1135" y="407" fill="#437257" font-size="19" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+      • 충치, 중성지방에서 집단 차이 관찰
+    </text>
+
+    <rect x="1105" y="450" width="390" height="150" rx="24" fill="#F7FFFB"/>
+    <text x="1135" y="495" fill="#215C40" font-size="21" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="700">
+      주의할 점
+    </text>
+    <text x="1135" y="530" fill="#437257" font-size="19" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+      • 관찰 데이터 기반 분석
+    </text>
+    <text x="1135" y="557" fill="#437257" font-size="19" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+      • 인과관계 단정은 어려움
+    </text>
+    <text x="1135" y="584" fill="#437257" font-size="19" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+      • 일부 변수는 표본/수집 한계 존재
+    </text>
+
+    <rect x="1105" y="635" width="390" height="125" rx="24" fill="#F7FFFB"/>
+    <text x="1135" y="680" fill="#215C40" font-size="21" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="700">
+      문서화 방향
+    </text>
+    <text x="1135" y="715" fill="#437257" font-size="19" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+      분석 맥락 → 결과 → 한계 순서로 간결하게 정리
+    </text>
+  </g>
+</svg>
