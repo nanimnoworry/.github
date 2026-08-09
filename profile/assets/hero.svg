@@ -1,64 +1,110 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
-  <title id="title">NANIM NO WORRY — Fertility AI Research</title>
-  <desc id="desc">Animated abstract visualization of clinical data flowing through ensemble models into a stable prediction.</desc>
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#071426"/>
-      <stop offset="0.52" stop-color="#102a43"/>
-      <stop offset="1" stop-color="#132238"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FBFF"/>
+      <stop offset="0.45" stop-color="#F6F2FF"/>
+      <stop offset="1" stop-color="#FFF8EF"/>
     </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#60a5fa"/>
-      <stop offset="0.5" stop-color="#a78bfa"/>
-      <stop offset="1" stop-color="#34d399"/>
+    <linearGradient id="card1" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#8FD3FF"/>
+      <stop offset="1" stop-color="#D9F2FF"/>
     </linearGradient>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="8" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <linearGradient id="card2" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFD79B"/>
+      <stop offset="1" stop-color="#FFF0D6"/>
+    </linearGradient>
+    <linearGradient id="card3" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#CFC7FF"/>
+      <stop offset="1" stop-color="#EEE9FF"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#20304A" flood-opacity="0.12"/>
+    </filter>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#20304A" flood-opacity="0.08"/>
     </filter>
   </defs>
-  <rect width="1200" height="360" rx="28" fill="url(#bg)"/>
-  <circle cx="160" cy="90" r="92" fill="#2563eb" opacity="0.12">
-    <animate attributeName="r" values="82;102;82" dur="7s" repeatCount="indefinite"/>
+
+  <rect width="1600" height="900" rx="32" fill="url(#bg)"/>
+
+  <circle cx="1380" cy="120" r="90" fill="#FFF2C7" opacity="0.75">
+    <animate attributeName="cy" values="120;136;120" dur="7s" repeatCount="indefinite"/>
   </circle>
-  <circle cx="1030" cy="270" r="118" fill="#8b5cf6" opacity="0.10">
-    <animate attributeName="r" values="108;128;108" dur="8s" repeatCount="indefinite"/>
+  <circle cx="124" cy="150" r="58" fill="#DFF4FF" opacity="0.9">
+    <animate attributeName="cy" values="150;132;150" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1480" cy="760" r="68" fill="#E8DEFF" opacity="0.85">
+    <animate attributeName="cy" values="760;744;760" dur="8s" repeatCount="indefinite"/>
   </circle>
 
-  <g opacity="0.28" stroke="#93c5fd" stroke-width="1.4">
-    <path d="M65 278 C240 210 300 255 445 190 S720 125 900 190 S1060 200 1140 145" fill="none" stroke-dasharray="8 12">
-      <animate attributeName="stroke-dashoffset" values="0;-80" dur="6s" repeatCount="indefinite"/>
-    </path>
-    <path d="M90 300 C250 245 345 290 500 225 S735 160 890 215 S1040 235 1125 180" fill="none" stroke-dasharray="5 15">
-      <animate attributeName="stroke-dashoffset" values="0;-100" dur="8s" repeatCount="indefinite"/>
-    </path>
-  </g>
+  <path d="M90 730C190 650 310 640 430 700C550 760 650 770 750 700" stroke="#92D7FF" stroke-width="12" stroke-linecap="round" opacity="0.75"/>
+  <path d="M970 205C1060 160 1150 160 1235 210" stroke="#FFC46B" stroke-width="10" stroke-linecap="round" opacity="0.6"/>
+  <path d="M1120 780C1220 720 1320 715 1410 760" stroke="#BFAEFF" stroke-width="11" stroke-linecap="round" opacity="0.6"/>
 
-  <g transform="translate(70 74)">
-    <text x="0" y="0" fill="#93c5fd" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="4">FERTILITY AI RESEARCH</text>
-    <text x="0" y="70" fill="#f8fafc" font-family="Arial, sans-serif" font-size="56" font-weight="800">NANIM NO WORRY</text>
-    <rect x="0" y="92" width="620" height="5" rx="3" fill="url(#accent)"/>
-    <text x="0" y="137" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="21">Clinical signals · OOF validation · ensemble diversity · reproducible evidence</text>
-    <text x="0" y="177" fill="#94a3b8" font-family="Arial, sans-serif" font-size="17">난임 환자 대상 임신 성공 여부 예측 프로젝트</text>
-  </g>
+  <rect x="88" y="82" width="120" height="40" rx="20" fill="#111827"/>
+  <text x="148" y="108" text-anchor="middle" fill="white" font-size="18" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="700">OZ DONGARI</text>
 
-  <g transform="translate(825 68)" filter="url(#glow)">
-    <circle cx="100" cy="100" r="72" fill="none" stroke="#60a5fa" stroke-width="3" opacity="0.75">
-      <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="14s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="100" cy="100" r="50" fill="none" stroke="#a78bfa" stroke-width="2.5" stroke-dasharray="16 8" opacity="0.8">
-      <animateTransform attributeName="transform" type="rotate" from="360 100 100" to="0 100 100" dur="10s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="100" cy="100" r="17" fill="#34d399" opacity="0.9">
-      <animate attributeName="opacity" values="0.55;1;0.55" dur="2.6s" repeatCount="indefinite"/>
-    </circle>
-    <g fill="#e2e8f0">
-      <circle cx="100" cy="28" r="5"/><circle cx="169" cy="78" r="5"/><circle cx="141" cy="160" r="5"/><circle cx="58" cy="160" r="5"/><circle cx="31" cy="78" r="5"/>
+  <text x="88" y="220" fill="#0F172A" font-size="68" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="800">
+    데이터로 건강을 읽는
+  </text>
+  <text x="88" y="300" fill="#0F172A" font-size="68" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="800">
+    오즈 동아리 프로젝트
+  </text>
+
+  <text x="88" y="372" fill="#475569" font-size="27" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="500">
+    흡연 여부 데이터 분석 · 시각화 · 인사이트 도출
+  </text>
+  <text x="88" y="414" fill="#64748B" font-size="24" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+    건강검진 데이터 약 7,000건을 바탕으로 BMI, 충치, 중성지방, 혈압과 흡연의 관계를 정리했습니다.
+  </text>
+
+  <rect x="88" y="470" width="230" height="70" rx="22" fill="#0F172A" filter="url(#soft)"/>
+  <text x="203" y="514" text-anchor="middle" fill="white" font-size="24" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="700">
+    Public Repository
+  </text>
+
+  <rect x="348" y="470" width="280" height="70" rx="22" fill="white" stroke="#E2E8F0" filter="url(#soft)"/>
+  <text x="488" y="514" text-anchor="middle" fill="#334155" font-size="24" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="700">
+    smoking_health_data
+  </text>
+
+  <g filter="url(#shadow)">
+    <g>
+      <rect x="950" y="160" width="250" height="180" rx="28" fill="url(#card1)"/>
+      <rect x="975" y="195" width="80" height="14" rx="7" fill="#2B5E7A" opacity="0.55"/>
+      <rect x="975" y="225" width="150" height="14" rx="7" fill="#2B5E7A" opacity="0.3"/>
+      <rect x="975" y="255" width="110" height="14" rx="7" fill="#2B5E7A" opacity="0.3"/>
+      <rect x="975" y="286" width="125" height="14" rx="7" fill="#2B5E7A" opacity="0.3"/>
+      <text x="975" y="324" fill="#234862" font-size="24" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="800">DATASET</text>
+      <text x="975" y="352" fill="#325E79" font-size="18" font-family="system-ui, -apple-system, Segoe UI, sans-serif">7,000 rows · 18 columns</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -8; 0 0" dur="6s" repeatCount="indefinite"/>
+    </g>
+
+    <g>
+      <rect x="1208" y="300" width="270" height="200" rx="28" fill="url(#card2)"/>
+      <rect x="1235" y="338" width="160" height="14" rx="7" fill="#75552C" opacity="0.45"/>
+      <rect x="1235" y="368" width="190" height="14" rx="7" fill="#75552C" opacity="0.25"/>
+      <rect x="1235" y="398" width="140" height="14" rx="7" fill="#75552C" opacity="0.25"/>
+      <circle cx="1408" cy="450" r="28" fill="#FFF6E7"/>
+      <path d="M1395 450L1404 459L1421 441" stroke="#B87400" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="1235" y="470" fill="#7A5428" font-size="24" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="800">INSIGHTS</text>
+      <text x="1235" y="499" fill="#8B6940" font-size="18" font-family="system-ui, -apple-system, Segoe UI, sans-serif">BMI · 충치 · 중성지방</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 10; 0 0" dur="7.4s" repeatCount="indefinite"/>
+    </g>
+
+    <g>
+      <rect x="1015" y="535" width="290" height="195" rx="28" fill="url(#card3)"/>
+      <rect x="1042" y="572" width="175" height="14" rx="7" fill="#57469B" opacity="0.45"/>
+      <rect x="1042" y="602" width="205" height="14" rx="7" fill="#57469B" opacity="0.24"/>
+      <rect x="1042" y="632" width="150" height="14" rx="7" fill="#57469B" opacity="0.24"/>
+      <path d="M1045 686C1095 655 1150 650 1200 670C1230 682 1250 690 1276 674" stroke="#6D59C4" stroke-width="8" stroke-linecap="round"/>
+      <text x="1042" y="705" fill="#554496" font-size="24" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-weight="800">VISUALIZATION</text>
+      <text x="1042" y="734" fill="#6759A3" font-size="18" font-family="system-ui, -apple-system, Segoe UI, sans-serif">Notebook → README → Landing</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -9; 0 0" dur="6.5s" repeatCount="indefinite"/>
     </g>
   </g>
 
-  <g transform="translate(72 315)" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8">
-    <text x="0" y="0">Official final: Plan 3 · Submission AUC 0.74231</text>
-    <text x="535" y="0">Highest submitted AUC: Plan 2 · 0.74232</text>
-  </g>
+  <text x="88" y="790" fill="#64748B" font-size="22" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+    Organized for clarity, readability, and public presentation
+  </text>
 </svg>
