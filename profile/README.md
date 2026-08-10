@@ -1,7 +1,7 @@
 <a id="top"></a>
 
 <p align="center">
-  <img src="./assets/hero.svg" width="100%" alt="NANIM NO WORRY fertility AI research" />
+  <a href="#_" aria-label="NANIM NO WORRY fertility AI research visual"><img src="./assets/hero.svg" width="100%" alt="NANIM NO WORRY fertility AI research" /></a>
 </p>
 
 <h1 align="center">난임걱정마삼조</h1>
@@ -41,9 +41,7 @@ IVF와 DI처럼 시술 과정이 다른 경우에는 결측값의 의미도 달�
 ## Model Lineage
 
 <p align="center">
-  <a href="https://github.com/nanimnoworry/PSP/blob/main/docs/model_lineage.md">
-    <img src="./assets/model-lineage.svg" width="100%" alt="Fertility PSP model lineage" />
-  </a>
+  <a href="#_" aria-label="Fertility PSP model lineage visual"><img src="./assets/model-lineage.svg" width="100%" alt="Fertility PSP model lineage" /></a>
 </p>
 
 공식 모델 계보와 최종 제출 자료는 [`PSP`](https://github.com/nanimnoworry/PSP)에 정리되어 있습니다.
