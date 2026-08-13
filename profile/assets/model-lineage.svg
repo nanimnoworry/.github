@@ -42,9 +42,9 @@
     <text x="78" y="202" font-size="16" fill="#475569">AUC 0.74213</text>
 
     <rect x="330" y="110" width="190" height="118" rx="18" fill="#ffffff" stroke="#a78bfa" stroke-width="2" vector-effect="non-scaling-stroke"/>
-    <text x="350" y="142" font-size="15" font-weight="700" fill="#7c3aed">PLAN 2</text>
-    <text x="350" y="172" font-size="19" font-weight="800" fill="#0f172a">Feature + Stacking</text>
-    <text x="350" y="202" font-size="16" fill="#7c3aed">Highest · 0.74232</text>
+    <text x="346" y="142" font-size="15" font-weight="700" fill="#7c3aed">PLAN 2</text>
+    <text x="346" y="172" font-size="19" font-weight="800" fill="#0f172a">Feature + Stacking</text>
+    <text x="346" y="202" font-size="16" fill="#7c3aed">Highest · 0.74232</text>
 
     <rect x="595" y="110" width="190" height="118" rx="18" fill="url(#final)" stroke="#10b981" stroke-width="2.5" vector-effect="non-scaling-stroke"/>
     <text x="618" y="138" font-size="15" font-weight="700" fill="#059669">PLAN 3</text>
