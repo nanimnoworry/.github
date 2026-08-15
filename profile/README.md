@@ -70,3 +70,9 @@ IVF와 DI처럼 시술 과정이 다른 경우에는 결측값의 의미도 달�
 </p>
 
 연구 결과는 실제 의료 판단이나 임상 의사결정을 위한 모델이 아닙니다.
+
+---
+
+## License and Rights
+
+이 Organization 소개와 시각 자산은 공개 열람용이며 오픈 라이선스로 배포하지 않습니다. 자세한 범위와 기여 기록은 [LICENSE](../LICENSE), [RIGHTS.md](../RIGHTS.md), [CONTRIBUTORS.md](../CONTRIBUTORS.md)를 확인하세요.
