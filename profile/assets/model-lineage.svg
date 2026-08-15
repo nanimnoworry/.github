@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title desc">
   <title id="title">Fertility project model lineage</title>
-  <desc id="desc">Plan 1 to Plan 2 to Plan 3 final adopted, followed by post-submission planB research.</desc>
+  <desc id="desc">Plan 1, Plan 2 highest submission, Plan 3 final adopted, and post-submission planB research.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#f8fafc"/>
@@ -14,7 +14,7 @@
 
   <rect width="1200" height="300" rx="24" fill="url(#bg)"/>
   <text x="56" y="48" font-family="Arial, sans-serif" font-size="22" font-weight="800" fill="#0f172a">MODEL LINEAGE</text>
-  <text x="56" y="76" font-family="Arial, sans-serif" font-size="15" fill="#64748b">최고 제출 점수와 최종 채택 모델을 분리해 기록합니다.</text>
+  <text x="56" y="76" font-family="Arial, sans-serif" font-size="15" fill="#64748b">Highest submission ≠ final adopted model</text>
 
   <!-- All cards share the same top/bottom bounds so the lineage stays visually aligned at every scale. -->
   <g stroke="#94a3b8" stroke-width="3" fill="none" vector-effect="non-scaling-stroke">
