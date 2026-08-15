@@ -8,7 +8,7 @@
 
 <p align="center">
   <strong>난임 환자 대상 임신 성공 여부 예측 AI 프로젝트</strong><br />
-  난임 시술 데이터의 구조를 분석하고 OOF 검증과 앙상블을 이용해 임신 성공 확률을 예측했습니다.
+  구조적 결측 · OOF 검증 · CatBoost/LightGBM/XGBoost · Ensemble
 </p>
 
 <p align="center">
@@ -22,9 +22,11 @@
 
 ## Project
 
-연령, 시술 유형, 난자·배아·이식 정보, 과거 시술 이력 등을 이용한 ROC-AUC 기반 이진 분류 프로젝트입니다.
+**Task:** 난임 시술 데이터 기반 임신 성공 여부 이진 분류  
+**Metric:** ROC-AUC  
+**Clinical axes:** 연령 · 시술 유형 · 난자/배아/이식 정보 · 과거 시술 이력
 
-IVF와 DI처럼 시술 과정이 다른 경우에는 결측값의 의미도 달라질 수 있다고 보고, 배아·난자·이식 관련 값이 함께 비는 패턴을 구조적 결측으로 다뤘습니다. 모델링에서는 CatBoost, LightGBM, XGBoost를 중심으로 OOF 검증과 여러 앙상블 방식을 비교했습니다.
+**결측 처리:** IVF/DI 시술 구조 차이 반영. 배아·난자·이식 관련 동시 결측은 비해당 구조와 일반 결측을 분리.
 
 ## Final Result
 
@@ -36,7 +38,7 @@ IVF와 DI처럼 시술 과정이 다른 경우에는 결측값의 의미도 달�
 | 최고 제출 점수 | **2안 · 0.74232** |
 | 최종 채택 모델 | **3안 · 0.74231** |
 
-2안의 제출 점수가 조금 더 높았지만, 최종 발표에서는 모델 복잡도와 검증 부담, seed 변동성, 추론 비용까지 고려해 3안을 최종 모델로 선택했습니다.
+**채택 기준:** 제출 점수 단독 최적화 제외 · 모델 복잡도 · 검증 부담 · seed 변동성 · 추론 비용
 
 ## Model Lineage
 
@@ -44,23 +46,23 @@ IVF와 DI처럼 시술 과정이 다른 경우에는 결측값의 의미도 달�
   <a href="#_" aria-label="Fertility PSP model lineage visual"><img src="./assets/model-lineage.svg" width="100%" alt="Fertility PSP model lineage" /></a>
 </p>
 
-공식 모델 계보와 최종 제출 자료는 [`PSP`](https://github.com/nanimnoworry/PSP)에 정리되어 있습니다.
+공식 계보·제출 artifact: [`PSP`](https://github.com/nanimnoworry/PSP)
 
 ## Research
 
-- **구조적 결측:** 시술 유형에 따라 원래 존재하지 않는 정보를 일반적인 결측과 구분했습니다.
-- **Feature Engineering:** 연령 구간, 시술 유형, 난자·배아 수, 이식 시점, 기증자 정보, 과거 시술 이력과 상호작용을 검토했습니다.
-- **OOF 검증:** 단일 hold-out보다 K-Fold OOF를 중심으로 모델과 앙상블을 비교했습니다.
-- **앙상블:** Weighted, Rank, Multi-Seed, Stacking 계열을 실험했습니다.
+- **Structural missingness** — 시술별 비해당 구조 / 일반 결측 분리
+- **Feature Engineering** — 연령 구간 · 시술 유형 · 난자/배아 수 · 이식 시점 · 기증자 정보 · 과거 시술 이력 · 상호작용
+- **OOF validation** — K-Fold OOF 중심
+- **Ensemble** — Weighted · Rank · Multi-Seed · Stacking
 
 ## Public Repositories
 
-| Repository | 내용 |
+| Repository | 범위 |
 |---|---|
-| **[`PSP`](https://github.com/nanimnoworry/PSP)** | 공식 프로젝트, 최종 제출·발표 결과, 모델 계보 |
-| [`BS`](https://github.com/nanimnoworry/BS) | 3안과 연결된 모델 비교·OOF·Weighted/Rank Ensemble 연구 |
+| **[`PSP`](https://github.com/nanimnoworry/PSP)** | 공식 프로젝트 · 최종 제출/발표 · 모델 계보 |
+| [`BS`](https://github.com/nanimnoworry/BS) | 3안 연계 모델 비교 · OOF · Weighted/Rank Ensemble |
 
-후속 실험 기록과 임상·문헌 근거 자료는 Organization 내부 저장소에 별도로 보존하고 있습니다.
+후속 실험·임상/문헌 근거 — Organization 내부 저장소.
 
 ---
 
@@ -69,10 +71,13 @@ IVF와 DI처럼 시술 과정이 다른 경우에는 결측값의 의미도 달�
   <sub>Highest submitted AUC: Plan 2 · 0.74232</sub>
 </p>
 
-연구 결과는 실제 의료 판단이나 임상 의사결정을 위한 모델이 아닙니다.
+**용도 제한:** 임상 의사결정용 모델 아님.
 
 ---
 
 ## License and Rights
 
-이 Organization 소개와 시각 자산은 공개 열람용이며 오픈 라이선스로 배포하지 않습니다. 자세한 범위와 기여 기록은 [LICENSE](../LICENSE), [RIGHTS.md](../RIGHTS.md), [CONTRIBUTORS.md](../CONTRIBUTORS.md)를 확인하세요.
+**Public view · no public reuse license.**  
+Organization 소개·시각 자산은 별도 허가 없는 재사용/재배포 불가.
+
+[LICENSE](../LICENSE) · [RIGHTS.md](../RIGHTS.md) · [CONTRIBUTORS.md](../CONTRIBUTORS.md)
