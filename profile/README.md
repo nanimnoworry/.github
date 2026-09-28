@@ -22,6 +22,7 @@
 
 ## Project
 
+**Competition:** LG Aimers 6기 Phase2 · [DACON 공식 대회](https://dacon.io/competitions/official/236452)  
 **Task:** 대회 제공 난임 시술 정형 데이터 기반 임신 성공 여부 이진 분류  
 **Metric:** ROC-AUC  
 **Domain feature axes:** 연령 · 시술 유형 · 난자/배아/이식 정보 · 과거 시술 이력
