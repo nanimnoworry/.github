@@ -18,6 +18,17 @@
   <img src="https://img.shields.io/badge/Final-Plan%203%20%C2%B7%200.74231-EA580C?style=flat-square" alt="Final model" />
 </p>
 
+## Start Here
+
+**Recommended reading order: ① PSP → ② BS**
+
+| 순서 | Repository | 역할 |
+|---:|---|---|
+| **①** | **[`PSP`](https://github.com/nanimnoworry/PSP)** | **공식 프로젝트 허브 · 최종 제출/발표 · 모델 계보 · artifact provenance** |
+| **②** | [`BS`](https://github.com/nanimnoworry/BS) | 3안 연계 연구 workspace · 5-Fold OOF · Weighted/Rank Ensemble |
+
+> 처음 보는 경우 **PSP부터** 확인하세요. BS는 공식 최종 결과를 대체하지 않는 보조 연구 저장소입니다.
+
 ---
 
 ## Project
