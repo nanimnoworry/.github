@@ -64,6 +64,16 @@
 
 후속 실험·임상/문헌 근거 — Organization 내부 저장소.
 
+## Project Contributors
+
+**PSP project Git contributors (2026-08-15 record):**  
+[@emotigom](https://github.com/emotigom) · [@J36-Ai-Editer](https://github.com/J36-Ai-Editer) · [@UrungE](https://github.com/UrungE)
+
+이 목록은 PSP 저장소의 공개 Git 활동을 식별하기 위한 것이며 기여도 순위나 단독 소유권을 의미하지 않습니다.  
+세부 기준: [PSP CONTRIBUTORS.md](https://github.com/nanimnoworry/PSP/blob/main/CONTRIBUTORS.md)
+
+**Repository note:** `.github/CONTRIBUTORS.md`는 organization profile 저장소 자체의 commit 활동만 기록하며 프로젝트 전체 팀원 목록이 아닙니다.
+
 ---
 
 <p align="center">
