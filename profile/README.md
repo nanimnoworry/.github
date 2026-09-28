@@ -7,7 +7,7 @@
 <h1 align="center">난임걱정마삼조</h1>
 
 <p align="center">
-  <strong>난임 환자 대상 임신 성공 여부 예측 AI 프로젝트</strong><br />
+  <strong>대회 제공 난임 시술 데이터 기반 임신 성공 여부 예측 연구</strong><br />
   구조적 결측 · OOF 검증 · CatBoost/LightGBM/XGBoost · Ensemble
 </p>
 
@@ -22,9 +22,9 @@
 
 ## Project
 
-**Task:** 난임 시술 데이터 기반 임신 성공 여부 이진 분류  
+**Task:** 대회 제공 난임 시술 정형 데이터 기반 임신 성공 여부 이진 분류  
 **Metric:** ROC-AUC  
-**Clinical axes:** 연령 · 시술 유형 · 난자/배아/이식 정보 · 과거 시술 이력
+**Domain feature axes:** 연령 · 시술 유형 · 난자/배아/이식 정보 · 과거 시술 이력
 
 **결측 처리:** IVF/DI 시술 구조 차이 반영. 배아·난자·이식 관련 동시 결측은 비해당 구조와 일반 결측을 분리.
 
@@ -71,7 +71,7 @@
   <sub>Highest submitted AUC: Plan 2 · 0.74232</sub>
 </p>
 
-**용도 제한:** 임상 의사결정용 모델 아님.
+**Scope boundary:** 해커톤/연구 결과이며 실제 의료 환경의 임상 검증·진단·의사결정 성능을 주장하지 않음.
 
 ---
 
