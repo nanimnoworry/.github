@@ -14,14 +14,15 @@
   LG Aimers 6기 Phase2 · <a href="https://dacon.io/competitions/official/236452">DACON 공식 대회</a> · ROC-AUC
 </p>
 
-## Start Here
+## 30-Second Path
 
-처음 보는 경우 **① PSP → ② BS** 순서로 읽는 것이 가장 빠릅니다.
+**10초 — 프로젝트 이해:** 아래 **Project Snapshot → Evidence Pipeline**만 보면 문제와 접근법을 파악할 수 있습니다.
 
-- **① [`PSP`](https://github.com/nanimnoworry/PSP)** — 공식 프로젝트 허브 · 최종 결과 · 모델 계보 · artifact provenance
-- **② [`BS`](https://github.com/nanimnoworry/BS)** — 3안 연계 모델링 workspace · 5-Fold OOF · Weighted / Rank Ensemble
+**20초 — 공식 결과 확인:** **[`PSP`](https://github.com/nanimnoworry/PSP)**에서 최고 제출 점수, 최종 채택 모델, artifact provenance를 확인하세요.
 
-`planB`와 `Research-Papers`는 각각 후속 연구와 문헌·발표 근거를 보존하는 내부 저장소이며, 공개 결과의 기준은 `PSP`입니다.
+**Deep dive — 모델링 근거:** **[`BS`](https://github.com/nanimnoworry/BS)**에서 CatBoost / LightGBM / XGBoost의 5-Fold OOF와 Weighted / Rank Ensemble을 확인하세요.
+
+`planB`와 `Research-Papers`는 각각 후속 연구와 문헌·발표 근거를 보존하는 내부 저장소이며, **공개 결과의 기준점은 PSP**입니다.
 
 ## Project Snapshot
 

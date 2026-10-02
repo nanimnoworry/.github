@@ -1,8 +1,14 @@
 # nanimnoworry · Organization Profile
 
-- [`profile/README.md`](profile/README.md) — Organization landing
-- `profile/assets/` — SVG assets
-- [`PSP`](https://github.com/nanimnoworry/PSP) — 공식 결과 · 모델 계보
+- [profile/README.md](profile/README.md) — Organization landing
+- profile/assets/ — responsive SVG visual system
+- [PSP](https://github.com/nanimnoworry/PSP) — official result · model lineage · artifact provenance
+- [BS](https://github.com/nanimnoworry/BS) — Plan 3 OOF / ensemble research workspace
+- [docs/GITHUB_PUBLIC_SURFACE.md](docs/GITHUB_PUBLIC_SURFACE.md) — About · topics · pinned repository target settings
+- [profile/public-surface-contract.json](profile/public-surface-contract.json) — cross-repository canonical contract
+- scripts/validate_public_surface.py — live public-surface consistency check
+
+The profile visual system is validated separately from the public-surface contract. The latter checks the current public PSP and BS READMEs and repository metadata so score lineage and repository roles cannot silently drift apart.
 
 ---
 

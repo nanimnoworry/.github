@@ -1,0 +1,26 @@
+name: Public surface contract
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  cross-repository-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Organization profile
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate live public surface
+        run: python scripts/validate_public_surface.py
