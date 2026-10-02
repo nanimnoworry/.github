@@ -149,7 +149,12 @@ def validate_svg(path):
         if bus is None or history is None or branches is None: fail("hero.svg: signal collector contract missing")
         if history.attrib.get("d")!="M176 400 H240": fail("hero.svg: EMBRYO / HISTORY link must visibly reach collector bus")
         if bus.attrib.get("d")!="M240 160 V400": fail("hero.svg: collector bus geometry drift")
+        panel=root.find(".//svg:rect[@id='hero-panel']",ns)
+        if panel is None or not panel.attrib.get("stroke"): fail("hero.svg: canonical panel boundary missing")
     card_sizes=[float(t.attrib["font-size"]) for s in root.findall(".//svg:g[@data-card-set]",ns) for c in s.findall("svg:g[@data-card]",ns) for t in c.findall("svg:text",ns) if t.attrib.get("font-size")]
+    if path.name=="hero-mobile.svg":
+        panel=root.find(".//svg:rect[@id='hero-panel']",ns)
+        if panel is None or not panel.attrib.get("stroke"): fail("hero-mobile.svg: canonical panel boundary missing")
     if path.name.endswith("-mobile.svg"):
         if card_sizes and min(card_sizes)<22: fail(f"{path.name}: mobile card font below 22px design minimum")
     elif card_sizes and min(card_sizes)<13:
