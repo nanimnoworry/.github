@@ -1,19 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1376" viewBox="0 0 800 1376" role="img" aria-labelledby="title desc">
-  <title id="title">Model journey mobile</title><desc id="desc">Vertical official submission lineage followed by separately labeled post-submission research.</desc>
-  <rect width="800" height="1376" rx="32" fill="#0B1220"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1280" viewBox="0 0 800 1280" role="img" aria-labelledby="title desc">
+  <title id="title">Model journey mobile</title><desc id="desc">Four equal stacked cards preserve the official and post-submission lineage hierarchy.</desc>
+  <rect width="800" height="1280" rx="32" fill="#0B1220"/>
   <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
-    <g data-title="true"><text x="64" y="80" fill="#F8FAFC" font-size="38" font-weight="820"><tspan>MODEL JOURNEY</tspan></text></g>
+    <g data-title="true"><text x="64" y="80" fill="#F8FAFC" font-size="38" font-weight="830"><tspan>MODEL JOURNEY</tspan></text></g>
     <text x="64" y="126" fill="#94A3B8" font-size="24"><tspan>Official lineage first · later research separate</tspan></text>
-    <path d="M96 248 V1168" stroke="#334155" stroke-width="5"/>
-    <g data-grid="16">
-      <rect x="128" y="176" width="608" height="224" rx="24" fill="#101A2B" stroke="#334155"/>
-      <rect x="128" y="416" width="608" height="256" rx="24" fill="#0F2236" stroke="#38BDF8" stroke-width="3"/>
-      <rect x="128" y="688" width="608" height="272" rx="24" fill="#17142A" stroke="#A78BFA" stroke-width="4"/>
-      <rect x="128" y="976" width="608" height="272" rx="24" fill="#111827" stroke="#475569" stroke-dasharray="12 12"/>
+    <g data-card-stack="true" data-grid="16">
+      <rect x="64" y="176" width="672" height="240" rx="24" fill="#101A2B" stroke="#334155"/>
+      <rect x="64" y="432" width="672" height="240" rx="24" fill="#0F2236" stroke="#38BDF8" stroke-width="3"/>
+      <rect x="64" y="688" width="672" height="240" rx="24" fill="#17142A" stroke="#A78BFA" stroke-width="4"/>
+      <rect x="64" y="944" width="672" height="240" rx="24" fill="#111827" stroke="#475569" stroke-dasharray="12 12"/>
     </g>
-    <text x="160" y="226" fill="#94A3B8" font-size="24" font-weight="820"><tspan>PLAN 1</tspan></text><text x="160" y="286" fill="#F8FAFC" font-size="36" font-weight="800"><tspan>OOF baseline</tspan></text><text x="160" y="346" fill="#CBD5E1" font-size="28"><tspan>Submission AUC 0.74213</tspan></text>
-    <text x="160" y="466" fill="#38BDF8" font-size="24" font-weight="820"><tspan>PLAN 2 · HIGHEST SUBMITTED</tspan></text><text x="160" y="526" fill="#F8FAFC" font-size="34" font-weight="800"><tspan>Feature expansion + ensemble</tspan></text><text x="160" y="586" fill="#BAE6FD" font-size="44" font-weight="840"><tspan>0.74232</tspan></text>
-    <text x="160" y="738" fill="#A78BFA" font-size="24" font-weight="820"><tspan>PLAN 3 · FINAL ADOPTED</tspan></text><text x="160" y="798" fill="#F8FAFC" font-size="34" font-weight="800"><tspan>OOF + Multi-Seed</tspan></text><text x="160" y="858" fill="#DDD6FE" font-size="44" font-weight="840"><tspan>0.74231</tspan></text><text x="160" y="910" fill="#94A3B8" font-size="25"><tspan>final adopted submission model</tspan></text>
-    <text x="160" y="1026" fill="#94A3B8" font-size="24" font-weight="820"><tspan>AFTER OFFICIAL SUBMISSION</tspan></text><text x="160" y="1086" fill="#F8FAFC" font-size="34" font-weight="800"><tspan>planB research</tspan></text><text x="160" y="1134" fill="#94A3B8" font-size="25"><tspan>reproduction · bootstrap · slice review</tspan></text><text x="160" y="1182" fill="#64748B" font-size="24"><tspan>separate lineage · official result unchanged</tspan></text>
+    <text x="96" y="228" fill="#94A3B8" font-size="24" font-weight="820"><tspan>PLAN 1 · BASELINE</tspan></text><text x="96" y="292" fill="#F8FAFC" font-size="36" font-weight="800"><tspan>OOF ensemble</tspan></text><text x="96" y="356" fill="#CBD5E1" font-size="30"><tspan>Submission 0.74213</tspan></text>
+    <text x="96" y="484" fill="#38BDF8" font-size="24" font-weight="820"><tspan>PLAN 2 · HIGHEST SUBMITTED</tspan></text><text x="96" y="548" fill="#F8FAFC" font-size="34" font-weight="800"><tspan>Feature expansion + stacking</tspan></text><text x="96" y="620" fill="#BAE6FD" font-size="44" font-weight="850"><tspan>0.74232</tspan></text>
+    <text x="96" y="740" fill="#A78BFA" font-size="24" font-weight="820"><tspan>PLAN 3 · FINAL ADOPTED</tspan></text><text x="96" y="804" fill="#F8FAFC" font-size="36" font-weight="800"><tspan>OOF + Multi-Seed</tspan></text><text x="96" y="868" fill="#DDD6FE" font-size="44" font-weight="850"><tspan>0.74231</tspan></text><text x="96" y="908" fill="#94A3B8" font-size="24"><tspan>final adopted submission model</tspan></text>
+    <text x="96" y="996" fill="#94A3B8" font-size="24" font-weight="820"><tspan>AFTER OFFICIAL SUBMISSION</tspan></text><text x="96" y="1060" fill="#F8FAFC" font-size="36" font-weight="800"><tspan>planB research</tspan></text><text x="96" y="1110" fill="#94A3B8" font-size="25"><tspan>reproduction · bootstrap · slice review</tspan></text><text x="96" y="1150" fill="#64748B" font-size="24"><tspan>separate lineage · official result unchanged</tspan></text>
   </g>
 </svg>

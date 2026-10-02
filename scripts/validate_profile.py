@@ -47,6 +47,29 @@ def validate_readme():
     pos=[text.find(x) for x in order]
     if any(x<0 for x in pos) or pos!=sorted(pos): fail("README reading order contract failed")
 
+def rect_values(rect,path):
+    return tuple(number(rect.attrib.get(a),where=f"{path.name}:{a}") for a in ("x","y","width","height"))
+
+def validate_card_contract(root,ns,path):
+    for g in root.findall(".//svg:g[@data-card-row='true']",ns):
+        rects=g.findall("svg:rect",ns)
+        if len(rects)<2: fail(f"{path.name}: card row needs at least two rects")
+        vals=[rect_values(r,path) for r in rects]
+        ys={v[1] for v in vals}; ws={v[2] for v in vals}; hs={v[3] for v in vals}
+        if len(ys)!=1 or len(ws)!=1 or len(hs)!=1: fail(f"{path.name}: card row width/height/baseline mismatch")
+        xs=sorted(v[0] for v in vals); width=vals[0][2]
+        gaps=[xs[i+1]-(xs[i]+width) for i in range(len(xs)-1)]
+        if len({round(g,6) for g in gaps})>1 or any(g<16 for g in gaps): fail(f"{path.name}: card row gap mismatch")
+    for g in root.findall(".//svg:g[@data-card-stack='true']",ns):
+        rects=g.findall("svg:rect",ns)
+        if len(rects)<2: fail(f"{path.name}: card stack needs at least two rects")
+        vals=[rect_values(r,path) for r in rects]
+        xs={v[0] for v in vals}; ws={v[2] for v in vals}; hs={v[3] for v in vals}
+        if len(xs)!=1 or len(ws)!=1 or len(hs)!=1: fail(f"{path.name}: card stack width/height/alignment mismatch")
+        ys=sorted(v[1] for v in vals); height=vals[0][3]
+        gaps=[ys[i+1]-(ys[i]+height) for i in range(len(ys)-1)]
+        if len({round(g,6) for g in gaps})>1 or any(g<16 for g in gaps): fail(f"{path.name}: card stack gap mismatch")
+
 def validate_svg(path):
     raw=path.read_text(encoding="utf-8")
     for term in FORBIDDEN_SVG_TERMS:
@@ -70,16 +93,17 @@ def validate_svg(path):
             for attr in ("x","y","width","height"):
                 v=number(rect.attrib.get(attr),where=f"{path.name}:{attr}")
                 if not quantized(v): fail(f"{path.name}: non-quantized {attr}={v}")
-    animations=len(root.findall(".//svg:animate",ns))+len(root.findall(".//svg:animateTransform",ns))
+    validate_card_contract(root,ns,path)
+    animations=(len(root.findall(".//svg:animate",ns))+len(root.findall(".//svg:animateTransform",ns))+len(root.findall(".//svg:animateMotion",ns)))
     if path.name=="hero.svg":
-        if animations<4: fail("hero.svg: hero motion missing")
+        if animations<12: fail(f"hero.svg: cinematic motion budget too low ({animations})")
         safe=root.find(".//svg:rect[@id='text-safe-zone']",ns); fx=root.find(".//svg:g[@id='fx-zone']",ns)
         if safe is None or fx is None: fail("hero.svg: safe/fx zone missing")
         right=number(safe.attrib.get("x"))+number(safe.attrib.get("width"))
         m=re.search(r"translate\(([-0-9.]+)",fx.attrib.get("transform",""))
         if not m or float(m.group(1))<=right: fail("hero.svg: FX zone intrudes into text safe zone")
     elif path.name=="hero-mobile.svg":
-        if animations<1: fail("hero-mobile.svg: mobile hero motion missing")
+        if animations<6: fail(f"hero-mobile.svg: motion budget too low ({animations})")
     elif animations>1: fail(f"{path.name}: secondary panel exceeds ambient motion budget")
     if path.name.endswith("-mobile.svg"):
         sizes=[float(v) for v in re.findall(r'font-size="([0-9.]+)"',raw)]
@@ -93,7 +117,8 @@ def main():
     for p in sorted(ASSETS.glob("*.svg")): validate_svg(p)
     print("profile validator: PASS")
     print("assets: 12 / responsive SVG-first / desktop 1600px + mobile 800px")
-    print("editorial: <=4800 chars / <=7 H2 / technical details collapsed")
+    print("layout: equal card dimensions + constant gaps + common baselines")
+    print("hero: cinematic motion isolated to FX safe zone")
     return 0
 
 if __name__=="__main__":
