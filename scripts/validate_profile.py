@@ -7,8 +7,8 @@ import xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1]
 PROFILE=ROOT/"profile"; ASSETS=PROFILE/"assets"; README=PROFILE/"README.md"
 REQUIRED_ASSETS={
-"hero.svg","project-snapshot.svg","evidence-pipeline.svg","model-lineage.svg","repository-map.svg","footer-endcap.svg",
-"hero-mobile.svg","project-snapshot-mobile.svg","evidence-pipeline-mobile.svg","model-lineage-mobile.svg","repository-map-mobile.svg","footer-endcap-mobile.svg",
+"hero.svg","hero-light.svg","project-snapshot.svg","evidence-pipeline.svg","model-lineage.svg","repository-map.svg","footer-endcap.svg",
+"hero-mobile.svg","hero-light-mobile.svg","project-snapshot-mobile.svg","evidence-pipeline-mobile.svg","model-lineage-mobile.svg","repository-map-mobile.svg","footer-endcap-mobile.svg",
 }
 CANONICAL_FACTS={"0.74232","0.74231","PSP","BS","planB","Research-Papers","not a clinical diagnostic"}
 FORBIDDEN_PROFILE_TERMS={"thisisstress","Production adopted","production model"}
@@ -35,7 +35,8 @@ def validate_manifest():
     refs=set(re.findall(r"\./assets/([A-Za-z0-9._-]+\.svg)",text))
     if refs!=REQUIRED_ASSETS: fail(f"README/asset mismatch: refs={sorted(refs)}")
     if re.search(r"\.(png|jpe?g|gif|webp)(?:\)|\"|'|\s)",text,re.I): fail("raster asset reference found in profile README")
-    if text.count("<picture>")!=6 or text.count("max-width: 640px")!=6: fail("responsive picture contract failed")
+    if text.count("<picture>")!=7 or len(re.findall(r"max-width:\s*640px",text))!=7: fail("responsive picture contract failed")
+    if "#gh-light-mode-only" not in text or "#gh-dark-mode-only" not in text: fail("GitHub theme-specific Hero contract missing")
 
 def validate_readme():
     text=README.read_text(encoding="utf-8"); lower=text.lower()
@@ -102,12 +103,12 @@ def validate_motion(root,ns,path):
             for a in g.findall(f".//svg:{tag}",ns):
                 dur=seconds(a.attrib.get("dur"))
                 if dur<MOTION_MIN[role]: fail(f"{path.name}: {role} motion too fast ({dur}s < {MOTION_MIN[role]}s)")
-    if path.name=="hero.svg":
-        if roles!={"ambient","sweep","orbital","pulse","particle"}: fail(f"hero.svg: motion roles mismatch {roles}")
-        if total<12 or total>20: fail(f"hero.svg: motion count outside premium budget: {total}")
-    elif path.name=="hero-mobile.svg":
-        if roles!={"ambient","orbital","pulse","particle"}: fail(f"hero-mobile.svg: motion roles mismatch {roles}")
-        if total<7 or total>14: fail(f"hero-mobile.svg: motion count outside premium budget: {total}")
+    if path.name in {"hero.svg","hero-light.svg"}:
+        if roles!={"ambient","sweep","orbital","pulse","particle"}: fail(f"{path.name}: motion roles mismatch {roles}")
+        if total<12 or total>20: fail(f"{path.name}: motion count outside premium budget: {total}")
+    elif path.name in {"hero-mobile.svg","hero-light-mobile.svg"}:
+        if roles!={"ambient","orbital","pulse","particle"}: fail(f"{path.name}: motion roles mismatch {roles}")
+        if total<7 or total>14: fail(f"{path.name}: motion count outside premium budget: {total}")
     else:
         if roles and roles!={"ambient"}: fail(f"{path.name}: secondary panels may only use ambient motion")
         if total>1: fail(f"{path.name}: secondary motion budget exceeded")
@@ -135,20 +136,40 @@ def validate_svg(path):
                 if not quantized(v): fail(f"{path.name}: non-quantized {attr}={v}")
     validate_card_sets(root,ns,path)
     validate_motion(root,ns,path)
-    if path.name=="hero.svg":
+    if path.name in {"hero.svg","hero-light.svg"}:
         safe=root.find(".//svg:rect[@id='text-safe-zone']",ns); fx=root.find(".//svg:g[@id='fx-zone']",ns)
-        if safe is None or fx is None: fail("hero.svg: safe/fx zone missing")
+        if safe is None or fx is None: fail(f"{path.name}: safe/fx zone missing")
         right=number(safe.attrib.get("x"))+number(safe.attrib.get("width"))
         m=re.search(r"translate\(([-0-9.]+)",fx.attrib.get("transform",""))
-        if not m or float(m.group(1))<=right: fail("hero.svg: FX zone intrudes into text safe zone")
+        if not m or float(m.group(1))<=right: fail(f"{path.name}: FX zone intrudes into text safe zone")
+        bus=root.find(".//svg:path[@id='signal-bus']",ns)
+        history=root.find(".//svg:path[@id='history-link']",ns)
+        branches=root.find(".//svg:path[@id='model-branches']",ns)
+        if bus is None or history is None or branches is None: fail(f"{path.name}: signal collector contract missing")
+        if history.attrib.get("d")!="M176 400 H240": fail(f"{path.name}: EMBRYO / HISTORY link must visibly reach collector bus")
+        if bus.attrib.get("d")!="M240 160 V400": fail(f"{path.name}: collector bus geometry drift")
     card_sizes=[float(t.attrib["font-size"]) for s in root.findall(".//svg:g[@data-card-set]",ns) for c in s.findall("svg:g[@data-card]",ns) for t in c.findall("svg:text",ns) if t.attrib.get("font-size")]
     if path.name.endswith("-mobile.svg"):
         if card_sizes and min(card_sizes)<22: fail(f"{path.name}: mobile card font below 22px design minimum")
     elif card_sizes and min(card_sizes)<13:
         fail(f"{path.name}: desktop card font below 13px premium minimum")
 
+def validate_theme_pairs():
+    ns={"svg":"http://www.w3.org/2000/svg"}
+    for dark_name,light_name in (("hero.svg","hero-light.svg"),("hero-mobile.svg","hero-light-mobile.svg")):
+        dark=ET.fromstring((ASSETS/dark_name).read_text(encoding="utf-8"))
+        light=ET.fromstring((ASSETS/light_name).read_text(encoding="utf-8"))
+        def geometry(root):
+            items=[]
+            for card in root.findall(".//svg:g[@data-card]",ns):
+                rect=card.find("svg:rect",ns)
+                if rect is not None:
+                    items.append((card.attrib.get("data-card"),rect.attrib.get("x"),rect.attrib.get("y"),rect.attrib.get("width"),rect.attrib.get("height")))
+            return items
+        if geometry(dark)!=geometry(light): fail(f"{dark_name}/{light_name}: theme card geometry mismatch")
+
 def main():
-    validate_manifest(); validate_readme()
+    validate_manifest(); validate_readme(); validate_theme_pairs()
     joined="\n".join([README.read_text(encoding="utf-8")]+[p.read_text(encoding="utf-8") for p in ASSETS.glob("*.svg")]).lower()
     for term in ("thisisstress","stress score","forest-green"):
         if term in joined: fail(f"cross-project contamination: {term}")

@@ -22,4 +22,12 @@ def motion_page(seconds):
     return f'''<!doctype html><html><head><meta charset="utf-8"><style>*{{box-sizing:border-box}}html,body{{margin:0;background:#E8EDF4}}main{{width:1600px;margin:32px auto}}.frame{{background:white;padding:18px;border:1px solid #CBD5E1;border-radius:20px}}.label{{font:800 12px system-ui;color:#64748B;letter-spacing:.08em;margin-bottom:10px}}svg{{display:block;width:100%;height:auto;border-radius:12px}}</style></head><body onload="document.querySelector('svg').setCurrentTime({seconds})"><main><div class="frame"><div class="label">HERO MOTION · t={seconds}s</div>{hero_svg}</div></main></body></html>'''
 (QA/"hero-motion-t0.html").write_text(motion_page(0),encoding="utf-8")
 (QA/"hero-motion-t6.html").write_text(motion_page(6),encoding="utf-8")
-print("visual + alignment + deterministic temporal motion QA pages generated")
+def theme_page(asset,label,bg):
+    return f'''<!doctype html><html><head><meta charset="utf-8"><style>*{{box-sizing:border-box}}html,body{{margin:0;background:{bg}}}main{{width:1600px;margin:32px auto}}.frame{{background:{bg};padding:18px;border:1px solid #CBD5E1;border-radius:20px}}.label{{font:800 12px system-ui;color:#64748B;letter-spacing:.08em;margin-bottom:10px}}img{{display:block;width:100%;height:auto;border-radius:12px}}</style></head><body><main><div class="frame"><div class="label">{label}</div><img src="../profile/assets/{asset}" alt="{label}"></div></main></body></html>'''
+(QA/"hero-theme-light.html").write_text(theme_page("hero-light.svg","HERO · GITHUB LIGHT THEME","#FFFFFF"),encoding="utf-8")
+(QA/"hero-theme-dark.html").write_text(theme_page("hero.svg","HERO · GITHUB DARK THEME","#0D1117"),encoding="utf-8")
+def mobile_theme_page(asset,label,bg):
+    return f'''<!doctype html><html><head><meta charset="utf-8"><style>*{{box-sizing:border-box}}html,body{{margin:0;background:{bg}}}main{{width:800px;margin:24px auto}}.frame{{background:{bg};padding:14px;border:1px solid #CBD5E1;border-radius:20px}}.label{{font:800 12px system-ui;color:#64748B;letter-spacing:.08em;margin-bottom:10px}}img{{display:block;width:100%;height:auto;border-radius:12px}}</style></head><body><main><div class="frame"><div class="label">{label}</div><img src="../profile/assets/{asset}" alt="{label}"></div></main></body></html>'''
+(QA/"hero-theme-light-mobile.html").write_text(mobile_theme_page("hero-light-mobile.svg","MOBILE HERO · GITHUB LIGHT THEME","#FFFFFF"),encoding="utf-8")
+(QA/"hero-theme-dark-mobile.html").write_text(mobile_theme_page("hero-mobile.svg","MOBILE HERO · GITHUB DARK THEME","#0D1117"),encoding="utf-8")
+print("visual + alignment + deterministic temporal + desktop/mobile theme QA pages generated")
