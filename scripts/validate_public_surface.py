@@ -46,6 +46,8 @@ def ensure_path(repo: str, path: str) -> None:
 
 def validate_profile() -> None:
     require(PROFILE, ["## 30-Second Path", "Project Snapshot", "Evidence Pipeline", "PSP", "BS"], "Organization profile")
+    if len(PROFILE) > 4800:
+        fail(f"Organization profile: editorial budget exceeded ({len(PROFILE)} > 4800)")
     if PROFILE.find("https://github.com/nanimnoworry/PSP") > PROFILE.find("https://github.com/nanimnoworry/BS"):
         fail("Organization profile: PSP must appear before BS in the reading path")
     for private_repo in CONTRACT["private_repositories"]:
@@ -56,6 +58,9 @@ def validate_profile() -> None:
 def validate_repo(repo: str, spec: dict) -> None:
     readme = fetch_text(f"https://raw.githubusercontent.com/{ORG}/{repo}/main/README.md")
     require(readme, spec["required_phrases"], f"{repo}/README.md")
+    max_chars = int(spec["max_readme_chars"])
+    if len(readme) > max_chars:
+        fail(f"{repo}/README.md: editorial budget exceeded ({len(readme)} > {max_chars})")
     forbidden = ("thisisstress", "forest-green", "production adopted", "production model")
     for term in forbidden:
         if term in readme.lower():
@@ -78,8 +83,11 @@ def validate_repo(repo: str, spec: dict) -> None:
     if missing_topics:
         print(f"WARNING {repo}: recommended topics not yet applied in GitHub UI: {', '.join(missing_topics)}")
 
+    print(f"{repo}: README {len(readme)}/{max_chars} chars")
+
 def main() -> int:
     validate_profile()
+    print(f"Organization: README {len(PROFILE)}/4800 chars")
     for repo, spec in CONTRACT["repositories"].items():
         validate_repo(repo, spec)
     print("public surface contract: PASS")
