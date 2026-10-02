@@ -35,7 +35,7 @@ def validate_manifest():
     refs=set(re.findall(r"\./assets/([A-Za-z0-9._-]+\.svg)",text))
     if refs!=REQUIRED_ASSETS: fail(f"README/asset mismatch: refs={sorted(refs)}")
     if re.search(r"\.(png|jpe?g|gif|webp)(?:\)|\"|'|\s)",text,re.I): fail("raster asset reference found in profile README")
-    if text.count("<picture>")!=7 or text.count("max-width: 640px")!=7: fail("responsive picture contract failed")
+    if text.count("<picture>")!=7 or len(re.findall(r"max-width:\s*640px",text))!=7: fail("responsive picture contract failed")
     if "#gh-light-mode-only" not in text or "#gh-dark-mode-only" not in text: fail("GitHub theme-specific Hero contract missing")
 
 def validate_readme():
