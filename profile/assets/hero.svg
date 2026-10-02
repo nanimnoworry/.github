@@ -27,7 +27,7 @@
   <text x="96" y="364" fill="#64748B" font-size="18"><tspan>LG Aimers Cohort 6 · Phase2 · ROC-AUC · competition research</tspan></text>
 
   <g data-card-set="row" data-grid="16">
-    <g data-card="hero-badge-1"><rect x="96" y="448" width="192" height="64" rx="16" fill="#0F2236" stroke="#38BDF8"/><text data-role="primary" x="112" y="486" fill="#BAE6FD" font-size="13" font-weight="820"><tspan>STRUCTURAL MISSINGNESS</tspan></text></g>
+    <g data-card="hero-badge-1"><rect x="96" y="448" width="192" height="64" rx="16" fill="#0F2236" stroke="#38BDF8"/><text data-role="primary" x="128" y="486" fill="#BAE6FD" font-size="12" font-weight="820"><tspan>STRUCTURAL MISSINGNESS</tspan></text></g>
     <g data-card="hero-badge-2"><rect x="304" y="448" width="192" height="64" rx="16" fill="#17142A" stroke="#A78BFA"/><text data-role="primary" x="336" y="486" fill="#DDD6FE" font-size="16" font-weight="820"><tspan>OOF-FIRST</tspan></text></g>
     <g data-card="hero-badge-3"><rect x="512" y="448" width="192" height="64" rx="16" fill="#271923" stroke="#FF7A66"/><text data-role="primary" x="544" y="486" fill="#FFD2CA" font-size="16" font-weight="820"><tspan>ENSEMBLE</tspan></text></g>
   </g>
