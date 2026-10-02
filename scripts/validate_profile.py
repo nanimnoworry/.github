@@ -77,7 +77,9 @@ def validate_svg(path: Path) -> None:
         if term.lower() in raw.lower():
             fail(f"{path.name}: forbidden font term {term}")
     if "system-ui" not in raw:
-        fail(f"{path.name}: system-ui stack missing")
+        fail(f"{path.name}: system-ui font stack missing")
+    if re.search(r"[\uac00-\ud7a3]", raw):
+        fail(f"{path.name}: Hangul text inside SVG risks font fallback boxes")
     try:
         root = ET.fromstring(raw)
     except ET.ParseError as exc:
