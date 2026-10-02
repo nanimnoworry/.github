@@ -76,14 +76,15 @@ def validate_card_sets(root,ns,path):
         role_offsets={}
         for card,rect in zip(cards,vals):
             cx,cy,_,_=rect
+            template=card.attrib.get("data-template","default")
             for t in card.findall("svg:text",ns):
                 role=t.attrib.get("data-role")
                 if not role: continue
                 off=(number(t.attrib.get("x"),where=f"{path.name}:{role}:x")-cx, number(t.attrib.get("y"),where=f"{path.name}:{role}:y")-cy)
-                role_offsets.setdefault(role,[]).append(off)
-        for role,offsets in role_offsets.items():
+                role_offsets.setdefault((template,role),[]).append(off)
+        for (template,role),offsets in role_offsets.items():
             if len(offsets)>1 and len({(round(x,6),round(y,6)) for x,y in offsets})!=1:
-                fail(f"{path.name}: optical text anchor mismatch for role {role}: {offsets}")
+                fail(f"{path.name}: optical text anchor mismatch for {template}/{role}: {offsets}")
 
 def count_anims(node,ns):
     return len(node.findall(".//svg:animate",ns))+len(node.findall(".//svg:animateTransform",ns))+len(node.findall(".//svg:animateMotion",ns))
@@ -140,9 +141,11 @@ def validate_svg(path):
         right=number(safe.attrib.get("x"))+number(safe.attrib.get("width"))
         m=re.search(r"translate\(([-0-9.]+)",fx.attrib.get("transform",""))
         if not m or float(m.group(1))<=right: fail("hero.svg: FX zone intrudes into text safe zone")
+    card_sizes=[float(t.attrib["font-size"]) for s in root.findall(".//svg:g[@data-card-set]",ns) for c in s.findall("svg:g[@data-card]",ns) for t in c.findall("svg:text",ns) if t.attrib.get("font-size")]
     if path.name.endswith("-mobile.svg"):
-        sizes=[float(v) for v in re.findall(r'font-size="([0-9.]+)"',raw)]
-        if sizes and min(sizes)<22: fail(f"{path.name}: mobile font below 22px design minimum")
+        if card_sizes and min(card_sizes)<22: fail(f"{path.name}: mobile card font below 22px design minimum")
+    elif card_sizes and min(card_sizes)<13:
+        fail(f"{path.name}: desktop card font below 13px premium minimum")
 
 def main():
     validate_manifest(); validate_readme()

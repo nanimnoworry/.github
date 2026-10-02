@@ -32,6 +32,8 @@ jobs:
           timeout 45s "$CHROME" --headless --disable-gpu --disable-dev-shm-usage --no-sandbox --hide-scrollbars --allow-file-access-from-files             --window-size=460,5400 --screenshot="$PWD/qa/mobile-sheet.png" "file://$PWD/qa/mobile-sheet.html"
           timeout 45s "$CHROME" --headless --disable-gpu --disable-dev-shm-usage --no-sandbox --hide-scrollbars --allow-file-access-from-files             --window-size=1680,5600 --screenshot="$PWD/qa/alignment-sheet.png" "file://$PWD/qa/alignment-sheet.html"
           timeout 45s "$CHROME" --headless --disable-gpu --disable-dev-shm-usage --no-sandbox --hide-scrollbars --allow-file-access-from-files             --window-size=880,7200 --screenshot="$PWD/qa/alignment-mobile.png" "file://$PWD/qa/alignment-mobile.html"
+          timeout 45s "$CHROME" --headless --disable-gpu --disable-dev-shm-usage --no-sandbox --hide-scrollbars --allow-file-access-from-files             --window-size=1680,760 --screenshot="$PWD/qa/hero-motion-t0.png" "file://$PWD/qa/hero-motion.html"
+          timeout 45s "$CHROME" --headless --disable-gpu --disable-dev-shm-usage --no-sandbox --hide-scrollbars --allow-file-access-from-files --run-all-compositor-stages-before-draw --virtual-time-budget=6500             --window-size=1680,760 --screenshot="$PWD/qa/hero-motion-t6.png" "file://$PWD/qa/hero-motion.html"
       - name: Upload visual QA evidence
         uses: actions/upload-artifact@v4
         with:
@@ -41,8 +43,11 @@ jobs:
             qa/mobile-sheet.html
             qa/alignment-sheet.html
             qa/alignment-mobile.html
+            qa/hero-motion.html
             qa/contact-sheet.png
             qa/mobile-sheet.png
             qa/alignment-sheet.png
             qa/alignment-mobile.png
+            qa/hero-motion-t0.png
+            qa/hero-motion-t6.png
           if-no-files-found: error
