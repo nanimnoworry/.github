@@ -1,6 +1,7 @@
-<p align="center">
+<picture>
+  <source media="(max-width: 640px)" srcset="./assets/hero-mobile.svg" />
   <img src="./assets/hero.svg" width="100%" alt="NANIM NO WORRY fertility AI evidence assay" />
-</p>
+</picture>
 
 <h1 align="center">난임걱정마삼조</h1>
 
@@ -24,17 +25,19 @@
 
 ## Project Snapshot
 
-<p align="center">
+<picture>
+  <source media="(max-width: 640px)" srcset="./assets/project-snapshot-mobile.svg" />
   <img src="./assets/project-snapshot.svg" width="100%" alt="Project snapshot with dataset scale, metric, and structural missingness insight" />
-</p>
+</picture>
 
 이 프로젝트의 핵심은 결측을 일괄적인 누락으로 처리하지 않고 **IVF / DI 등 시술 맥락에 따른 구조적 비해당 가능성**을 먼저 검토한 뒤 모델링했다는 점입니다.
 
 ## Evidence Pipeline
 
-<p align="center">
+<picture>
+  <source media="(max-width: 640px)" srcset="./assets/evidence-pipeline-mobile.svg" />
   <img src="./assets/evidence-pipeline.svg" width="100%" alt="Evidence pipeline from competition data to OOF validation and ensemble evidence" />
-</p>
+</picture>
 
 - **Clinical signals** — 연령 · 시술 유형 · 난자/배아/이식 정보 · 기증자 정보 · 과거 시술 이력
 - **Structural context** — 시술 과정 차이에 따른 결측 의미 분리와 missing indicator
@@ -43,17 +46,19 @@
 
 ## Model Journey
 
-<p align="center">
+<picture>
+  <source media="(max-width: 640px)" srcset="./assets/model-lineage-mobile.svg" />
   <img src="./assets/model-lineage.svg" width="100%" alt="Model journey distinguishing highest submitted Plan 2 and final adopted Plan 3" />
-</p>
+</picture>
 
 공식 발표 기준 **최고 제출 AUC는 2안 `0.74232`**, **최종 채택 submission model은 3안 `0.74231`**입니다. 두 값은 의도적으로 분리해 기록합니다.
 
 ## Validation & Decision
 
-<p align="center">
+<picture>
+  <source media="(max-width: 640px)" srcset="./assets/validation-evidence-mobile.svg" />
   <img src="./assets/validation-evidence.svg" width="100%" alt="Validation panel separating highest submitted score from final adopted model" />
-</p>
+</picture>
 
 3안 채택에는 제출 점수만이 아니라 모델 복잡도, 검증 부담, seed 변동성, 추론 비용과 운영 단순성이 함께 고려되었습니다.
 
@@ -72,9 +77,10 @@
 
 ## Repository System
 
-<p align="center">
+<picture>
+  <source media="(max-width: 640px)" srcset="./assets/repository-map-mobile.svg" />
   <img src="./assets/repository-map.svg" width="100%" alt="Repository system separating public project surfaces and private research archives" />
-</p>
+</picture>
 
 | Repository | Visibility | 역할 |
 |---|---|---|
@@ -102,9 +108,10 @@
 
 ## Research Scope
 
-<p align="center">
+<picture>
+  <source media="(max-width: 640px)" srcset="./assets/footer-endcap-mobile.svg" />
   <img src="./assets/footer-endcap.svg" width="100%" alt="Competition research scope endcap" />
-</p>
+</picture>
 
 **Scope boundary:** 해커톤·연구 결과이며 실제 의료 환경의 임상 검증, 진단 또는 의사결정 성능을 주장하지 않습니다. In short: **not a clinical diagnostic or medical decision system.**
 
