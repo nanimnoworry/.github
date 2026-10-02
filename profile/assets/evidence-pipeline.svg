@@ -1,39 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="480" viewBox="0 0 1600 480" role="img" aria-labelledby="title desc">
-  <title id="title">Evidence pipeline</title>
-  <desc id="desc">Five equal research-stage cards move from competition signals to contextual interpretation, model diversity, OOF validation, and evidence.</desc>
-  <rect width="1600" height="480" rx="32" fill="#F8FAFC"/>
-  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
-    <g data-title="true"><text x="96" y="74" fill="#0B1220" font-size="30" font-weight="830"><tspan>EVIDENCE PIPELINE</tspan></text></g>
-    <text x="96" y="110" fill="#64748B" font-size="17"><tspan>Five stages · one evidence chain · one aligned visual rhythm</tspan></text>
-    <path d="M224 248 H1376" stroke="#CBD5E1" stroke-width="4"/>
-    <g fill="#94A3B8"><path d="M368 248 l-14 -9 v18z"/><path d="M656 248 l-14 -9 v18z"/><path d="M944 248 l-14 -9 v18z"/><path d="M1232 248 l-14 -9 v18z"/></g>
-    <g data-card-row="true" data-grid="16">
-      <rect x="96" y="160" width="256" height="176" rx="24" fill="#FFFFFF" stroke="#CBD5E1"/>
-      <rect x="384" y="160" width="256" height="176" rx="24" fill="#FFF7F5" stroke="#FFB5A8"/>
-      <rect x="672" y="160" width="256" height="176" rx="24" fill="#F5F3FF" stroke="#C4B5FD"/>
-      <rect x="960" y="160" width="256" height="176" rx="24" fill="#F0F9FF" stroke="#7DD3FC"/>
-      <rect x="1248" y="160" width="256" height="176" rx="24" fill="#0B1220" stroke="#0B1220"/>
-    </g>
-    <text x="128" y="204" fill="#64748B" font-size="14" font-weight="820" letter-spacing="2"><tspan>01 · SIGNALS</tspan></text>
-    <text x="128" y="244" fill="#0B1220" font-size="22" font-weight="800"><tspan>Competition table</tspan></text>
-    <text x="128" y="280" fill="#64748B" font-size="15"><tspan>age · treatment · embryo</tspan></text><text x="128" y="304" fill="#64748B" font-size="15"><tspan>history · donor source</tspan></text>
-
-    <text x="416" y="204" fill="#D95F4F" font-size="14" font-weight="820" letter-spacing="2"><tspan>02 · CONTEXT</tspan></text>
-    <text x="416" y="244" fill="#0B1220" font-size="21" font-weight="800"><tspan>Structural missingness</tspan></text>
-    <text x="416" y="280" fill="#64748B" font-size="15"><tspan>not-applicable patterns</tspan></text><text x="416" y="304" fill="#64748B" font-size="15"><tspan>preserved as signal</tspan></text>
-
-    <text x="704" y="204" fill="#7C5FD1" font-size="14" font-weight="820" letter-spacing="2"><tspan>03 · DIVERSITY</tspan></text>
-    <text x="704" y="244" fill="#0B1220" font-size="22" font-weight="800"><tspan>Model lanes</tspan></text>
-    <text x="704" y="280" fill="#64748B" font-size="15"><tspan>CatBoost · LightGBM</tspan></text><text x="704" y="304" fill="#64748B" font-size="15"><tspan>XGBoost · ensembles</tspan></text>
-
-    <text x="992" y="204" fill="#0284C7" font-size="14" font-weight="820" letter-spacing="2"><tspan>04 · VALIDATION</tspan></text>
-    <text x="992" y="244" fill="#0B1220" font-size="22" font-weight="800"><tspan>OOF-first review</tspan></text>
-    <text x="992" y="280" fill="#64748B" font-size="15"><tspan>K-fold comparison</tspan></text><text x="992" y="304" fill="#64748B" font-size="15"><tspan>stability over one split</tspan></text>
-
-    <text x="1280" y="204" fill="#38BDF8" font-size="14" font-weight="820" letter-spacing="2"><tspan>05 · EVIDENCE</tspan></text>
-    <text x="1280" y="242" fill="#F8FAFC" font-size="21" font-weight="820"><tspan>Score + complexity</tspan></text>
-    <text x="1280" y="270" fill="#F8FAFC" font-size="21" font-weight="820"><tspan>+ stability</tspan></text>
-    <text x="1280" y="306" fill="#CBD5E1" font-size="14"><tspan>highest ≠ final adopted</tspan></text>
-    <circle cx="1470" cy="190" r="5" fill="#38BDF8"><animate attributeName="opacity" values="0.3;0.95;0.3" dur="4.8s" repeatCount="indefinite"/></circle>
+<title id="title">Evidence pipeline</title><desc id="desc">Five equal stage cards with identical internal text anchors form a single aligned evidence chain.</desc>
+<rect width="1600" height="480" rx="32" fill="#F8FAFC"/>
+<g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <g data-title="true"><text x="96" y="74" fill="#0B1220" font-size="30" font-weight="830"><tspan>EVIDENCE PIPELINE</tspan></text></g><text x="96" y="110" fill="#64748B" font-size="17"><tspan>Five stages · one evidence chain · one visual rhythm</tspan></text>
+  <path d="M224 248 H1376" stroke="#CBD5E1" stroke-width="4"/><g fill="#94A3B8"><path d="M368 248 l-14 -9 v18z"/><path d="M656 248 l-14 -9 v18z"/><path d="M944 248 l-14 -9 v18z"/><path d="M1232 248 l-14 -9 v18z"/></g>
+  <g data-card-set="row" data-grid="16">
+    <g data-card="signals"><rect x="96" y="160" width="256" height="176" rx="24" fill="#FFFFFF" stroke="#CBD5E1"/><text data-role="label" x="128" y="204" fill="#64748B" font-size="14" font-weight="820" letter-spacing="2"><tspan>01 · SIGNALS</tspan></text><text data-role="primary" x="128" y="248" fill="#0B1220" font-size="22" font-weight="800"><tspan>Competition table</tspan></text><text data-role="secondary" x="128" y="292" fill="#64748B" font-size="15"><tspan x="128">age · treatment · embryo</tspan><tspan x="128" dy="24">history · donor source</tspan></text></g>
+    <g data-card="context"><rect x="384" y="160" width="256" height="176" rx="24" fill="#FFF7F5" stroke="#FFB5A8"/><text data-role="label" x="416" y="204" fill="#D95F4F" font-size="14" font-weight="820" letter-spacing="2"><tspan>02 · CONTEXT</tspan></text><text data-role="primary" x="416" y="248" fill="#0B1220" font-size="20" font-weight="800"><tspan>Structural missingness</tspan></text><text data-role="secondary" x="416" y="292" fill="#64748B" font-size="15"><tspan x="416">not-applicable patterns</tspan><tspan x="416" dy="24">preserved as signal</tspan></text></g>
+    <g data-card="diversity"><rect x="672" y="160" width="256" height="176" rx="24" fill="#F5F3FF" stroke="#C4B5FD"/><text data-role="label" x="704" y="204" fill="#7C5FD1" font-size="14" font-weight="820" letter-spacing="2"><tspan>03 · DIVERSITY</tspan></text><text data-role="primary" x="704" y="248" fill="#0B1220" font-size="22" font-weight="800"><tspan>Model lanes</tspan></text><text data-role="secondary" x="704" y="292" fill="#64748B" font-size="15"><tspan x="704">CatBoost · LightGBM</tspan><tspan x="704" dy="24">XGBoost · ensembles</tspan></text></g>
+    <g data-card="validation"><rect x="960" y="160" width="256" height="176" rx="24" fill="#F0F9FF" stroke="#7DD3FC"/><text data-role="label" x="992" y="204" fill="#0284C7" font-size="14" font-weight="820" letter-spacing="2"><tspan>04 · VALIDATION</tspan></text><text data-role="primary" x="992" y="248" fill="#0B1220" font-size="22" font-weight="800"><tspan>OOF-first review</tspan></text><text data-role="secondary" x="992" y="292" fill="#64748B" font-size="15"><tspan x="992">K-fold comparison</tspan><tspan x="992" dy="24">stability over one split</tspan></text></g>
+    <g data-card="evidence"><rect x="1248" y="160" width="256" height="176" rx="24" fill="#0B1220" stroke="#0B1220"/><text data-role="label" x="1280" y="204" fill="#38BDF8" font-size="14" font-weight="820" letter-spacing="2"><tspan>05 · EVIDENCE</tspan></text><text data-role="primary" x="1280" y="248" fill="#F8FAFC" font-size="20" font-weight="820"><tspan x="1280">Score + complexity</tspan><tspan x="1280" dy="28">+ stability</tspan></text><text data-role="secondary" x="1280" y="292" fill="#CBD5E1" font-size="14"><tspan>highest submitted ≠ final</tspan></text></g>
   </g>
+  <g data-motion-role="ambient"><circle cx="1472" cy="190" r="5" fill="#38BDF8"><animate attributeName="opacity" values=".28;.9;.28" dur="8s" repeatCount="indefinite"/></circle></g>
+</g>
 </svg>

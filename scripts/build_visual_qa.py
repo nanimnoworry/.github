@@ -1,14 +1,20 @@
 #!/usr/bin/env python3
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]; QA=ROOT/"qa"; QA.mkdir(exist_ok=True)
-ASSETS=[
-("01 · Hero","hero.svg","hero-mobile.svg"),("02 · Project Snapshot","project-snapshot.svg","project-snapshot-mobile.svg"),
-("03 · Evidence Pipeline","evidence-pipeline.svg","evidence-pipeline-mobile.svg"),("04 · Model Journey","model-lineage.svg","model-lineage-mobile.svg"),
-("05 · Repository System","repository-map.svg","repository-map-mobile.svg"),("06 · Scope Endcap","footer-endcap.svg","footer-endcap-mobile.svg")]
-def page(mobile=False):
-    width="390px" if mobile else "min(1600px, calc(100vw - 64px))"; gap="18px" if mobile else "28px"
-    cards="".join(f'<section class="card"><div class="label">{l}</div><picture><source media="(max-width:640px)" srcset="../profile/assets/{m}"><img src="../profile/assets/{d}" alt="{l}"></picture></section>' for l,d,m in ASSETS)
-    return f'''<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>*{{box-sizing:border-box}}body{{margin:0;background:#E8EDF4;color:#0B1220;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}}main{{width:{width};margin:0 auto;padding:32px 0 64px;display:grid;gap:{gap}}}header,.card{{background:#fff;border:1px solid #CBD5E1;border-radius:20px}}header{{padding:20px 24px}}h1{{font-size:{'22px' if mobile else '28px'};margin:0 0 6px}}p{{margin:0;color:#64748B;font-size:14px}}.card{{padding:{'10px' if mobile else '18px'};overflow:hidden}}.label{{font-size:12px;font-weight:800;letter-spacing:.08em;color:#64748B;margin:0 0 10px}}img{{display:block;width:100%;height:auto;border-radius:{'10px' if mobile else '14px'}}}</style></head><body><main><header><h1>NANIM NO WORRY · {'Mobile ' if mobile else ''}Visual QA</h1><p>Final editorial set · responsive source · boundary · overlap · readable scaling</p></header>{cards}</main></body></html>'''
-(QA/"contact-sheet.html").write_text(page(False),encoding="utf-8")
-(QA/"mobile-sheet.html").write_text(page(True),encoding="utf-8")
-print("visual QA pages generated")
+ASSETS=[("01 · Hero","hero.svg","hero-mobile.svg"),("02 · Project Snapshot","project-snapshot.svg","project-snapshot-mobile.svg"),("03 · Evidence Pipeline","evidence-pipeline.svg","evidence-pipeline-mobile.svg"),("04 · Model Journey","model-lineage.svg","model-lineage-mobile.svg"),("05 · Repository System","repository-map.svg","repository-map-mobile.svg"),("06 · Scope Endcap","footer-endcap.svg","footer-endcap-mobile.svg")]
+def page(mobile=False,grid=False):
+    native=800 if mobile else 1600
+    width=f"{native}px" if grid else ("390px" if mobile else "min(1600px, calc(100vw - 64px))")
+    gap="18px" if mobile else "28px"
+    cards=""
+    for label,d,m in ASSETS:
+        asset=m if mobile else d
+        overlay='<span class="grid"></span>' if grid else ''
+        cards+=f'<section class="card"><div class="label">{label}</div><div class="frame"><img src="../profile/assets/{asset}" alt="{label}">{overlay}</div></section>'
+    gridcss=f'.grid{{position:absolute;inset:0;background-image:linear-gradient(to right,rgba(239,68,68,.16) 1px,transparent 1px),linear-gradient(to bottom,rgba(239,68,68,.11) 1px,transparent 1px);background-size:16px 16px;pointer-events:none}}' if grid else ''
+    return f'''<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>*{{box-sizing:border-box}}body{{margin:0;background:#E8EDF4;color:#0B1220;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}}main{{width:{width};margin:0 auto;padding:32px 0 64px;display:grid;gap:{gap}}}header,.card{{background:#fff;border:1px solid #CBD5E1;border-radius:20px}}header{{padding:20px 24px}}h1{{font-size:{'22px' if mobile else '28px'};margin:0 0 6px}}p{{margin:0;color:#64748B;font-size:14px}}.card{{padding:{'10px' if mobile and not grid else '18px'};overflow:hidden}}.label{{font-size:12px;font-weight:800;letter-spacing:.08em;color:#64748B;margin:0 0 10px}}.frame{{position:relative}}img{{display:block;width:100%;height:auto;border-radius:12px}}{gridcss}</style></head><body><main><header><h1>NANIM NO WORRY · {'Mobile ' if mobile else ''}{'Alignment ' if grid else ''}QA</h1><p>Optical text anchors · quantized card geometry · motion-safe static frame</p></header>{cards}</main></body></html>'''
+(QA/"contact-sheet.html").write_text(page(False,False),encoding="utf-8")
+(QA/"mobile-sheet.html").write_text(page(True,False),encoding="utf-8")
+(QA/"alignment-sheet.html").write_text(page(False,True),encoding="utf-8")
+(QA/"alignment-mobile.html").write_text(page(True,True),encoding="utf-8")
+print("visual + alignment QA pages generated")

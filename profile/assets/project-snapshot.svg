@@ -1,32 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="416" viewBox="0 0 1600 416" role="img" aria-labelledby="title desc">
-  <title id="title">Project snapshot</title>
-  <desc id="desc">Four equal cards summarize train scale, test scale, official metric, and the central structural-missingness insight.</desc>
-  <rect width="1600" height="416" rx="32" fill="#0B1220"/>
-  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
-    <g data-title="true"><text x="96" y="72" fill="#F8FAFC" font-size="30" font-weight="820"><tspan>PROJECT SNAPSHOT</tspan></text></g>
-    <text x="96" y="108" fill="#64748B" font-size="17"><tspan>Competition data · binary classification · reproducible research boundary</tspan></text>
-    <g data-card-row="true" data-grid="16">
-      <rect x="96" y="144" width="304" height="192" rx="24" fill="#101A2B" stroke="#223149"/>
-      <rect x="464" y="144" width="304" height="192" rx="24" fill="#101A2B" stroke="#223149"/>
-      <rect x="832" y="144" width="304" height="192" rx="24" fill="#17142A" stroke="#6D5AA0"/>
-      <rect x="1200" y="144" width="304" height="192" rx="24" fill="#271923" stroke="#8B4A41"/>
-    </g>
-    <text x="128" y="190" fill="#38BDF8" font-size="15" font-weight="820" letter-spacing="2"><tspan>TRAIN</tspan></text>
-    <text x="128" y="250" fill="#F8FAFC" font-size="42" font-weight="850"><tspan>256,351</tspan></text>
-    <text x="128" y="286" fill="#94A3B8" font-size="18"><tspan>rows · 69 columns</tspan></text>
-
-    <text x="496" y="190" fill="#38BDF8" font-size="15" font-weight="820" letter-spacing="2"><tspan>TEST</tspan></text>
-    <text x="496" y="250" fill="#F8FAFC" font-size="42" font-weight="850"><tspan>90,067</tspan></text>
-    <text x="496" y="286" fill="#94A3B8" font-size="18"><tspan>rows · 68 columns</tspan></text>
-
-    <text x="864" y="190" fill="#A78BFA" font-size="15" font-weight="820" letter-spacing="2"><tspan>OFFICIAL METRIC</tspan></text>
-    <text x="864" y="250" fill="#F8FAFC" font-size="42" font-weight="850"><tspan>ROC-AUC</tspan></text>
-    <text x="864" y="286" fill="#94A3B8" font-size="18"><tspan>probability ranking quality</tspan></text>
-
-    <text x="1232" y="190" fill="#FF7A66" font-size="15" font-weight="820" letter-spacing="2"><tspan>CENTRAL INSIGHT</tspan></text>
-    <text x="1232" y="232" fill="#F8FAFC" font-size="22" font-weight="800"><tspan>Missingness can encode</tspan></text>
-    <text x="1232" y="262" fill="#F8FAFC" font-size="22" font-weight="800"><tspan>treatment structure.</tspan></text>
-    <text x="1232" y="300" fill="#CBD5E1" font-size="15"><tspan>IVF / DI context before</tspan></text>
-    <text x="1232" y="322" fill="#CBD5E1" font-size="15"><tspan>generic imputation</tspan></text>
+<title id="title">Project snapshot</title><desc id="desc">Four equal cards with a shared internal text baseline system summarize the dataset, metric, and structural-missingness insight.</desc>
+<rect width="1600" height="416" rx="32" fill="#0B1220"/>
+<g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+  <g data-title="true"><text x="96" y="72" fill="#F8FAFC" font-size="30" font-weight="830"><tspan>PROJECT SNAPSHOT</tspan></text></g>
+  <text x="96" y="108" fill="#64748B" font-size="17"><tspan>Competition data · binary classification · reproducible research boundary</tspan></text>
+  <g data-card-set="row" data-grid="16">
+    <g data-card="train"><rect x="96" y="144" width="304" height="192" rx="24" fill="#101A2B" stroke="#223149"/><text data-role="label" x="128" y="188" fill="#38BDF8" font-size="15" font-weight="820" letter-spacing="2"><tspan>TRAIN</tspan></text><text data-role="primary" x="128" y="246" fill="#F8FAFC" font-size="42" font-weight="850"><tspan>256,351</tspan></text><text data-role="secondary" x="128" y="292" fill="#94A3B8" font-size="18"><tspan>rows · 69 columns</tspan></text></g>
+    <g data-card="test"><rect x="464" y="144" width="304" height="192" rx="24" fill="#101A2B" stroke="#223149"/><text data-role="label" x="496" y="188" fill="#38BDF8" font-size="15" font-weight="820" letter-spacing="2"><tspan>TEST</tspan></text><text data-role="primary" x="496" y="246" fill="#F8FAFC" font-size="42" font-weight="850"><tspan>90,067</tspan></text><text data-role="secondary" x="496" y="292" fill="#94A3B8" font-size="18"><tspan>rows · 68 columns</tspan></text></g>
+    <g data-card="metric"><rect x="832" y="144" width="304" height="192" rx="24" fill="#17142A" stroke="#6D5AA0"/><text data-role="label" x="864" y="188" fill="#A78BFA" font-size="15" font-weight="820" letter-spacing="2"><tspan>OFFICIAL METRIC</tspan></text><text data-role="primary" x="864" y="246" fill="#F8FAFC" font-size="42" font-weight="850"><tspan>ROC-AUC</tspan></text><text data-role="secondary" x="864" y="292" fill="#94A3B8" font-size="18"><tspan>probability ranking quality</tspan></text></g>
+    <g data-card="insight"><rect x="1200" y="144" width="304" height="192" rx="24" fill="#271923" stroke="#8B4A41"/><text data-role="label" x="1232" y="188" fill="#FF7A66" font-size="15" font-weight="820" letter-spacing="2"><tspan>CENTRAL INSIGHT</tspan></text><text data-role="primary" x="1232" y="246" fill="#F8FAFC" font-size="22" font-weight="800"><tspan x="1232">Missingness can encode</tspan><tspan x="1232" dy="28">treatment structure.</tspan></text><text data-role="secondary" x="1232" y="292" fill="#CBD5E1" font-size="14"><tspan>IVF / DI context before imputation</tspan></text></g>
   </g>
+</g>
 </svg>
