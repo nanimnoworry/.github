@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="880" viewBox="0 0 800 880" role="img" aria-labelledby="title desc">
+  <title id="title">NANIM NO WORRY mobile hero</title>
+  <desc id="desc">Mobile evidence assay hero with large readable project framing and simplified signal-to-evidence flow.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#08111F"/><stop offset="1" stop-color="#17142A"/></linearGradient>
+    <filter id="g" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="800" height="880" rx="32" fill="url(#bg)"/>
+  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <g data-title="true"><text x="64" y="86" fill="#38BDF8" font-size="28" font-weight="800" letter-spacing="3"><tspan>FERTILITY AI · EVIDENCE ASSAY</tspan></text></g>
+    <text x="64" y="162" fill="#F8FAFC" font-size="58" font-weight="840"><tspan>NANIM NO WORRY</tspan></text>
+    <text x="64" y="218" fill="#CBD5E1" font-size="30" font-weight="700"><tspan>Fertility outcome prediction research</tspan></text>
+    <text x="64" y="278" fill="#94A3B8" font-size="26"><tspan>Structural context → OOF validation</tspan></text>
+    <text x="64" y="314" fill="#94A3B8" font-size="26"><tspan>→ ensemble evidence</tspan></text>
+    <g data-grid="16">
+      <rect x="64" y="368" width="672" height="96" rx="24" fill="#0F2236" stroke="#38BDF8"/>
+      <rect x="64" y="480" width="672" height="96" rx="24" fill="#271923" stroke="#FF7A66"/>
+      <rect x="64" y="592" width="672" height="96" rx="24" fill="#17142A" stroke="#A78BFA"/>
+    </g>
+    <text x="96" y="426" fill="#BAE6FD" font-size="28" font-weight="760"><tspan>Clinical signals</tspan></text>
+    <text x="96" y="538" fill="#FFD2CA" font-size="28" font-weight="760"><tspan>Structural missingness context</tspan></text>
+    <text x="96" y="650" fill="#DDD6FE" font-size="28" font-weight="760"><tspan>CatBoost · LightGBM · XGBoost</tspan></text>
+    <path d="M400 688 V738" stroke="#A78BFA" stroke-width="4"/>
+    <circle cx="400" cy="786" r="42" fill="#0E1B2B" stroke="#A78BFA" stroke-width="4"/>
+    <circle cx="400" cy="786" r="15" fill="#F8FAFC" filter="url(#g)"><animate attributeName="opacity" values="0.45;1;0.45" dur="3.2s" repeatCount="indefinite"/></circle>
+    <text x="472" y="796" fill="#F8FAFC" font-size="28" font-weight="800"><tspan>OOF EVIDENCE</tspan></text>
+  </g>
+</svg>
