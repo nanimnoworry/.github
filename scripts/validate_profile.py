@@ -35,8 +35,17 @@ def validate_manifest():
     refs=set(re.findall(r"\./assets/([A-Za-z0-9._-]+\.svg)",text))
     if refs!=REQUIRED_ASSETS: fail(f"README/asset mismatch: refs={sorted(refs)}")
     if re.search(r"\.(png|jpe?g|gif|webp)(?:\)|\"|'|\s)",text,re.I): fail("raster asset reference found in profile README")
-    if text.count("<picture>")!=7 or len(re.findall(r"max-width:\s*640px",text))!=7: fail("responsive picture contract failed")
-    if "#gh-light-mode-only" not in text or "#gh-dark-mode-only" not in text: fail("GitHub theme-specific Hero contract missing")
+    if text.count("<picture>")!=6 or len(re.findall(r"max-width:\s*640px",text))!=7: fail("responsive picture contract failed")
+    if "#gh-light-mode-only" in text or "#gh-dark-mode-only" in text: fail("theme fragments must not be used inside HTML picture markup")
+    compact=re.sub(r"\s+","",text)
+    required_theme_media={
+        "(max-width:640px)and(prefers-color-scheme:dark)",
+        "(max-width:640px)and(prefers-color-scheme:light)",
+        "(prefers-color-scheme:dark)",
+        "(prefers-color-scheme:light)",
+    }
+    for media in required_theme_media:
+        if f'media="{media}"' not in compact: fail(f"theme-aware Hero source missing: {media}")
 
 def validate_readme():
     text=README.read_text(encoding="utf-8"); lower=text.lower()
