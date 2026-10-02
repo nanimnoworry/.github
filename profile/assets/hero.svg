@@ -1,64 +1,108 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
-  <title id="title">NANIM NO WORRY — Fertility AI Research</title>
-  <desc id="desc">Animated abstract visualization of clinical data flowing through ensemble models into a stable prediction.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="560" viewBox="0 0 1600 560" role="img" aria-labelledby="title desc">
+  <title id="title">NANIM NO WORRY — Fertility AI Evidence Assay</title>
+  <desc id="desc">Competition research profile showing clinical tabular signals moving through three model lanes into OOF validation and an evidence core. The visual does not represent a clinical diagnostic system.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#071426"/>
-      <stop offset="0.52" stop-color="#102a43"/>
-      <stop offset="1" stop-color="#132238"/>
+    <linearGradient id="heroBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08111F"/>
+      <stop offset="0.55" stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#111C2F"/>
     </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#60a5fa"/>
-      <stop offset="0.5" stop-color="#a78bfa"/>
-      <stop offset="1" stop-color="#34d399"/>
+    <linearGradient id="assayLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38BDF8"/>
+      <stop offset="0.52" stop-color="#A78BFA"/>
+      <stop offset="1" stop-color="#F8FAFC"/>
     </linearGradient>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="8" result="blur"/>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
-  <rect width="1200" height="360" rx="28" fill="url(#bg)"/>
-  <circle cx="160" cy="90" r="92" fill="#2563eb" opacity="0.12">
-    <animate attributeName="r" values="82;102;82" dur="7s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="1030" cy="270" r="118" fill="#8b5cf6" opacity="0.10">
-    <animate attributeName="r" values="108;128;108" dur="8s" repeatCount="indefinite"/>
-  </circle>
 
-  <g opacity="0.28" stroke="#93c5fd" stroke-width="1.4">
-    <path d="M65 278 C240 210 300 255 445 190 S720 125 900 190 S1060 200 1140 145" fill="none" stroke-dasharray="8 12">
-      <animate attributeName="stroke-dashoffset" values="0;-80" dur="6s" repeatCount="indefinite"/>
-    </path>
-    <path d="M90 300 C250 245 345 290 500 225 S735 160 890 215 S1040 235 1125 180" fill="none" stroke-dasharray="5 15">
-      <animate attributeName="stroke-dashoffset" values="0;-100" dur="8s" repeatCount="indefinite"/>
-    </path>
+  <rect width="1600" height="560" rx="32" fill="url(#heroBg)"/>
+  <path d="M0 496 H1600" stroke="#1E293B" stroke-width="1"/>
+  <path d="M880 64 V496" stroke="#1E293B" stroke-width="1" stroke-dasharray="8 16" opacity="0.9"/>
+
+  <rect id="text-safe-zone" x="80" y="64" width="720" height="432" fill="none" opacity="0" data-safe-zone="true"/>
+
+  <g data-title="true" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="96" y="118" fill="#38BDF8" font-size="20" font-weight="750" letter-spacing="4" data-safe="true"><tspan>FERTILITY AI · EVIDENCE ASSAY</tspan></text>
   </g>
+  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="96" y="206" fill="#F8FAFC" font-size="66" font-weight="820" data-safe="true"><tspan>NANIM NO WORRY</tspan></text>
+    <text x="96" y="252" fill="#CBD5E1" font-size="26" font-weight="650" data-safe="true"><tspan>난임걱정마삼조 · 임신 성공 여부 예측 연구</tspan></text>
+    <text x="96" y="312" fill="#94A3B8" font-size="20" data-safe="true"><tspan>Structural context → OOF validation → ensemble evidence</tspan></text>
+    <text x="96" y="350" fill="#94A3B8" font-size="20" data-safe="true"><tspan>LG Aimers 6기 Phase2 · ROC-AUC · competition research</tspan></text>
 
-  <g transform="translate(70 74)">
-    <text x="0" y="0" fill="#93c5fd" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="4">FERTILITY AI RESEARCH</text>
-    <text x="0" y="70" fill="#f8fafc" font-family="Arial, sans-serif" font-size="56" font-weight="800">NANIM NO WORRY</text>
-    <rect x="0" y="92" width="620" height="5" rx="3" fill="url(#accent)"/>
-    <text x="0" y="137" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="21">Clinical signals · OOF validation · ensemble diversity · reproducible evidence</text>
-    <text x="0" y="177" fill="#94a3b8" font-family="Arial, sans-serif" font-size="17">난임 환자 대상 임신 성공 여부 예측 프로젝트</text>
-  </g>
-
-  <g transform="translate(825 68)" filter="url(#glow)">
-    <circle cx="100" cy="100" r="72" fill="none" stroke="#60a5fa" stroke-width="3" opacity="0.75">
-      <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="14s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="100" cy="100" r="50" fill="none" stroke="#a78bfa" stroke-width="2.5" stroke-dasharray="16 8" opacity="0.8">
-      <animateTransform attributeName="transform" type="rotate" from="360 100 100" to="0 100 100" dur="10s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="100" cy="100" r="17" fill="#34d399" opacity="0.9">
-      <animate attributeName="opacity" values="0.55;1;0.55" dur="2.6s" repeatCount="indefinite"/>
-    </circle>
-    <g fill="#e2e8f0">
-      <circle cx="100" cy="28" r="5"/><circle cx="169" cy="78" r="5"/><circle cx="141" cy="160" r="5"/><circle cx="58" cy="160" r="5"/><circle cx="31" cy="78" r="5"/>
+    <g transform="translate(96 402)">
+      <rect x="0" y="0" width="210" height="54" rx="16" fill="#0F2236" stroke="#38BDF8"/>
+      <text x="24" y="34" fill="#BAE6FD" font-size="17" font-weight="700" data-safe="true"><tspan>STRUCTURAL MISSINGNESS</tspan></text>
+      <rect x="226" y="0" width="154" height="54" rx="16" fill="#1E1835" stroke="#A78BFA"/>
+      <text x="250" y="34" fill="#DDD6FE" font-size="17" font-weight="700" data-safe="true"><tspan>OOF-FIRST</tspan></text>
+      <rect x="396" y="0" width="174" height="54" rx="16" fill="#271923" stroke="#FF7A66"/>
+      <text x="420" y="34" fill="#FFD2CA" font-size="17" font-weight="700" data-safe="true"><tspan>ENSEMBLE</tspan></text>
     </g>
   </g>
 
-  <g transform="translate(72 315)" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8">
-    <text x="0" y="0">Official final: Plan 3 · Submission AUC 0.74231</text>
-    <text x="535" y="0">Highest submitted AUC: Plan 2 · 0.74232</text>
+  <g id="fx-zone" transform="translate(912 64)" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="0" y="30" fill="#64748B" font-size="14" font-weight="700" letter-spacing="2"><tspan>CLINICAL SIGNAL LANES</tspan></text>
+
+    <g data-grid="16">
+      <rect x="0" y="64" width="160" height="64" rx="16" fill="#0F2236" stroke="#24506D"/>
+      <rect x="0" y="144" width="160" height="64" rx="16" fill="#0F2236" stroke="#24506D"/>
+      <rect x="0" y="224" width="160" height="64" rx="16" fill="#271923" stroke="#8B4A41"/>
+      <rect x="0" y="304" width="160" height="64" rx="16" fill="#0F2236" stroke="#24506D"/>
+    </g>
+    <g fill="#E2E8F0" font-size="16" font-weight="700">
+      <text x="24" y="103"><tspan>AGE</tspan></text>
+      <text x="24" y="183"><tspan>TREATMENT</tspan></text>
+      <text x="24" y="263" fill="#FFD2CA"><tspan>MISSINGNESS</tspan></text>
+      <text x="24" y="343"><tspan>EMBRYO / HISTORY</tspan></text>
+    </g>
+
+    <g stroke-width="3" fill="none" opacity="0.95">
+      <path d="M176 96 H310" stroke="#38BDF8"/>
+      <path d="M176 176 H310" stroke="#38BDF8"/>
+      <path d="M176 256 H310" stroke="#FF7A66"/>
+      <path d="M176 336 H310" stroke="#38BDF8"/>
+    </g>
+
+    <g data-grid="16">
+      <rect x="320" y="64" width="192" height="64" rx="16" fill="#101A2B" stroke="#38BDF8"/>
+      <rect x="320" y="144" width="192" height="64" rx="16" fill="#17142A" stroke="#A78BFA"/>
+      <rect x="320" y="224" width="192" height="64" rx="16" fill="#101A2B" stroke="#38BDF8"/>
+    </g>
+    <g fill="#F8FAFC" font-size="15" font-weight="750">
+      <text x="344" y="103"><tspan>CATBOOST</tspan></text>
+      <text x="344" y="183"><tspan>LIGHTGBM</tspan></text>
+      <text x="344" y="263"><tspan>XGBOOST</tspan></text>
+    </g>
+
+    <g stroke="url(#assayLine)" stroke-width="3" fill="none">
+      <path d="M512 96 C548 96 548 176 558 176"/>
+      <path d="M512 176 H558"/>
+      <path d="M512 256 C548 256 548 176 558 176"/>
+    </g>
+
+    <circle cx="592" cy="176" r="50" fill="#0E1B2B" stroke="#A78BFA" stroke-width="3"/>
+    <circle cx="592" cy="176" r="18" fill="#F8FAFC" opacity="0.96" filter="url(#softGlow)">
+      <animate attributeName="opacity" values="0.56;1;0.56" dur="3.2s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="16;20;16" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="544" y="246" fill="#CBD5E1" font-size="14" font-weight="700"><tspan>OOF EVIDENCE</tspan></text>
+
+    <circle cy="96" r="5" fill="#38BDF8">
+      <animate attributeName="cx" values="176;310" dur="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cy="256" r="5" fill="#FF7A66">
+      <animate attributeName="cx" values="176;310" dur="2.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;0" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="548" r="5" fill="#A78BFA">
+      <animate attributeName="cy" values="176;176" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.25;1;0.25" dur="3s" repeatCount="indefinite"/>
+    </circle>
+
+    <text x="0" y="430" fill="#64748B" font-size="13"><tspan>Visual metaphor: evidence assay · not a clinical diagnostic device</tspan></text>
   </g>
 </svg>
