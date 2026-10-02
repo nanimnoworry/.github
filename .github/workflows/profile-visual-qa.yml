@@ -15,31 +15,38 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
       - name: Validate profile contracts
         run: python scripts/validate_profile.py
+
       - name: Build visual QA pages
         run: python scripts/build_visual_qa.py
-      - name: Render Chromium contact sheets
+
+      - name: Render Chromium evidence
         shell: bash
         run: |
           set -euo pipefail
           CHROME="$(command -v google-chrome || command -v chromium || command -v chromium-browser)"
+
           timeout 45s "$CHROME" --headless --disable-gpu --disable-dev-shm-usage --no-sandbox --hide-scrollbars --allow-file-access-from-files             --window-size=1800,5600 --screenshot="$PWD/qa/contact-sheet.png" "file://$PWD/qa/contact-sheet.html"
           timeout 45s "$CHROME" --headless --disable-gpu --disable-dev-shm-usage --no-sandbox --hide-scrollbars --allow-file-access-from-files             --window-size=460,5400 --screenshot="$PWD/qa/mobile-sheet.png" "file://$PWD/qa/mobile-sheet.html"
+
           timeout 45s "$CHROME" --headless --disable-gpu --disable-dev-shm-usage --no-sandbox --hide-scrollbars --allow-file-access-from-files             --window-size=1680,5600 --screenshot="$PWD/qa/alignment-sheet.png" "file://$PWD/qa/alignment-sheet.html"
           timeout 45s "$CHROME" --headless --disable-gpu --disable-dev-shm-usage --no-sandbox --hide-scrollbars --allow-file-access-from-files             --window-size=880,7200 --screenshot="$PWD/qa/alignment-mobile.png" "file://$PWD/qa/alignment-mobile.html"
+
           timeout 45s "$CHROME" --headless --disable-gpu --disable-dev-shm-usage --no-sandbox --hide-scrollbars --allow-file-access-from-files             --window-size=1680,760 --screenshot="$PWD/qa/hero-motion-t0.png" "file://$PWD/qa/hero-motion-t0.html"
-          timeout 45s "$CHROME" --headless --disable-gpu --disable-dev-shm-usage --no-sandbox --hide-scrollbars --allow-file-access-from-files             --window-size=1680,760 --screenshot="$PWD/qa/hero-motion-t6.png" "file://$PWD/qa/hero-motion-t6.html"
-          timeout 45s "$CHROME" --headless --disable-gpu --disable-dev-shm-usage --no-sandbox --hide-scrollbars --allow-file-access-from-files             --window-size=1680,760 --screenshot="$PWD/qa/hero-theme-light.png" "file://$PWD/qa/hero-theme-light.html"
-          timeout 45s "$CHROME" --headless --disable-gpu --disable-dev-shm-usage --no-sandbox --hide-scrollbars --allow-file-access-from-files             --window-size=1680,760 --screenshot="$PWD/qa/hero-theme-dark.png" "file://$PWD/qa/hero-theme-dark.html"
-          timeout 45s "$CHROME" --headless --disable-gpu --disable-dev-shm-usage --no-sandbox --hide-scrollbars --allow-file-access-from-files             --window-size=880,1120 --screenshot="$PWD/qa/hero-theme-light-mobile.png" "file://$PWD/qa/hero-theme-light-mobile.html"
-          timeout 45s "$CHROME" --headless --disable-gpu --disable-dev-shm-usage --no-sandbox --hide-scrollbars --allow-file-access-from-files             --window-size=880,1120 --screenshot="$PWD/qa/hero-theme-dark-mobile.png" "file://$PWD/qa/hero-theme-dark-mobile.html"
-          timeout 45s "$CHROME" --headless --disable-gpu --disable-dev-shm-usage --no-sandbox --hide-scrollbars --allow-file-access-from-files             --window-size=1680,760 --screenshot="$PWD/qa/hero-switch-light.png" "file://$PWD/qa/hero-theme-switcher.html"
-          timeout 45s "$CHROME" --headless --disable-gpu --disable-dev-shm-usage --no-sandbox --hide-scrollbars --allow-file-access-from-files --force-dark-mode             --window-size=1680,760 --screenshot="$PWD/qa/hero-switch-dark.png" "file://$PWD/qa/hero-theme-switcher.html"
+          timeout 45s "$CHROME" --headless --disable-gpu --disable-dev-shm-usage --no-sandbox --hide-scrollbars --allow-file-access-from-files             --window-size=1680,760 --screenshot="$PWD/qa/hero-motion-t7.png" "file://$PWD/qa/hero-motion-t7.html"
+
+          timeout 45s "$CHROME" --headless --disable-gpu --disable-dev-shm-usage --no-sandbox --hide-scrollbars --allow-file-access-from-files             --window-size=1060,520 --screenshot="$PWD/qa/hero-context-light.png" "file://$PWD/qa/hero-context-light.html"
+          timeout 45s "$CHROME" --headless --disable-gpu --disable-dev-shm-usage --no-sandbox --hide-scrollbars --allow-file-access-from-files             --window-size=1060,520 --screenshot="$PWD/qa/hero-context-dark.png" "file://$PWD/qa/hero-context-dark.html"
+          timeout 45s "$CHROME" --headless --disable-gpu --disable-dev-shm-usage --no-sandbox --hide-scrollbars --allow-file-access-from-files             --window-size=430,570 --screenshot="$PWD/qa/hero-context-light-mobile.png" "file://$PWD/qa/hero-context-light-mobile.html"
+          timeout 45s "$CHROME" --headless --disable-gpu --disable-dev-shm-usage --no-sandbox --hide-scrollbars --allow-file-access-from-files             --window-size=430,570 --screenshot="$PWD/qa/hero-context-dark-mobile.png" "file://$PWD/qa/hero-context-dark-mobile.html"
+
       - name: Upload visual QA evidence
         uses: actions/upload-artifact@v4
         with:
@@ -50,22 +57,19 @@ jobs:
             qa/alignment-sheet.html
             qa/alignment-mobile.html
             qa/hero-motion-t0.html
-            qa/hero-motion-t6.html
-            qa/hero-theme-light.html
-            qa/hero-theme-dark.html
-            qa/hero-theme-light-mobile.html
-            qa/hero-theme-dark-mobile.html
-            qa/hero-theme-switcher.html
+            qa/hero-motion-t7.html
+            qa/hero-context-light.html
+            qa/hero-context-dark.html
+            qa/hero-context-light-mobile.html
+            qa/hero-context-dark-mobile.html
             qa/contact-sheet.png
             qa/mobile-sheet.png
             qa/alignment-sheet.png
             qa/alignment-mobile.png
             qa/hero-motion-t0.png
-            qa/hero-motion-t6.png
-            qa/hero-theme-light.png
-            qa/hero-theme-dark.png
-            qa/hero-theme-light-mobile.png
-            qa/hero-theme-dark-mobile.png
-            qa/hero-switch-light.png
-            qa/hero-switch-dark.png
+            qa/hero-motion-t7.png
+            qa/hero-context-light.png
+            qa/hero-context-dark.png
+            qa/hero-context-light-mobile.png
+            qa/hero-context-dark-mobile.png
           if-no-files-found: error

@@ -1,48 +1,101 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="608" viewBox="0 0 1600 608" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="608" viewBox="0 0 1600 608" role="img" aria-labelledby="title desc" data-hero="canonical">
 <title id="title">NANIM NO WORRY — Fertility AI Evidence Assay</title>
-<desc id="desc">Dark-theme evidence-assay hero. Four clinical signal inputs join a visible collector bus, feed three model lanes, and resolve through slow orbital analysis into an OOF evidence core.</desc>
+<desc id="desc">Canonical evidence-assay instrument panel. Clinical signals join a collector rail, feed three model lanes, and converge through slow orbital analysis into a precise OOF evidence core.</desc>
 <defs>
-  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111F"/><stop offset=".52" stop-color="#0B1220"/><stop offset="1" stop-color="#17142A"/></linearGradient>
-  <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#38BDF8"/><stop offset=".52" stop-color="#A78BFA"/><stop offset="1" stop-color="#F8FAFC"/></linearGradient>
-  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#F8FAFC" stop-opacity=".035"/><stop offset=".5" stop-color="#38BDF8" stop-opacity=".018"/><stop offset="1" stop-color="#A78BFA" stop-opacity=".035"/></linearGradient>
-  <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#38BDF8" stop-opacity="0"/><stop offset=".5" stop-color="#F8FAFC" stop-opacity=".13"/><stop offset="1" stop-color="#A78BFA" stop-opacity="0"/></linearGradient>
-  <radialGradient id="aura"><stop stop-color="#A78BFA" stop-opacity=".24"/><stop offset=".42" stop-color="#38BDF8" stop-opacity=".09"/><stop offset="1" stop-color="#38BDF8" stop-opacity="0"/></radialGradient>
-  <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="9" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop stop-color="#06101E"/><stop offset=".5" stop-color="#0A1423"/><stop offset="1" stop-color="#17142A"/>
+  </linearGradient>
+  <linearGradient id="bay" x1="0" y1="0" x2="1" y2="1">
+    <stop stop-color="#0A1626" stop-opacity=".96"/><stop offset=".6" stop-color="#0B1423" stop-opacity=".92"/><stop offset="1" stop-color="#15142A" stop-opacity=".95"/>
+  </linearGradient>
+  <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0">
+    <stop stop-color="#38BDF8"/><stop offset=".52" stop-color="#A78BFA"/><stop offset="1" stop-color="#F8FAFC"/>
+  </linearGradient>
+  <linearGradient id="chipCyan" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#15334A"/><stop offset="1" stop-color="#0C2032"/></linearGradient>
+  <linearGradient id="chipViolet" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#292044"/><stop offset="1" stop-color="#17162E"/></linearGradient>
+  <linearGradient id="chipCoral" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#3B2028"/><stop offset="1" stop-color="#24171E"/></linearGradient>
+  <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+    <stop stop-color="#38BDF8" stop-opacity="0"/><stop offset=".5" stop-color="#F8FAFC" stop-opacity=".10"/><stop offset="1" stop-color="#A78BFA" stop-opacity="0"/>
+  </linearGradient>
+  <radialGradient id="aura"><stop stop-color="#A78BFA" stop-opacity=".22"/><stop offset=".42" stop-color="#38BDF8" stop-opacity=".08"/><stop offset="1" stop-color="#38BDF8" stop-opacity="0"/></radialGradient>
+  <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="18"/></filter>
 </defs>
-<rect width="1600" height="608" rx="32" fill="url(#bg)"/>
-<path d="M0 544 H1600" stroke="#1E293B" stroke-width="1"/>
-<path d="M832 64 V544" stroke="#1E293B" stroke-width="1" stroke-dasharray="8 16"/>
+
+<rect id="hero-panel" x="1" y="1" width="1598" height="606" rx="32" fill="url(#bg)" stroke="#26364D" stroke-width="2"/>
+<rect x="10" y="10" width="1580" height="588" rx="26" fill="none" stroke="#F8FAFC" stroke-opacity=".035"/>
+<path d="M0 544 H1600" stroke="#223147" stroke-width="1"/>
+<path d="M832 64 V544" stroke="#223147" stroke-width="1" stroke-dasharray="8 16"/>
 <rect id="text-safe-zone" x="80" y="64" width="720" height="480" fill="none" opacity="0"/>
 
-<g data-motion-role="ambient"><circle cx="1424" cy="274" r="230" fill="url(#aura)" opacity=".72"><animate attributeName="opacity" values=".58;.78;.58" dur="12s" repeatCount="indefinite"/></circle></g>
+<g data-motion-role="ambient">
+  <circle cx="1430" cy="280" r="244" fill="url(#aura)" opacity=".62"><animate attributeName="opacity" values=".50;.70;.50" dur="14s" repeatCount="indefinite"/></circle>
+</g>
 
 <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
-  <g data-title="true"><text x="96" y="122" fill="#38BDF8" font-size="20" font-weight="800" letter-spacing="4"><tspan>FERTILITY AI · EVIDENCE ASSAY</tspan></text></g>
-  <text x="96" y="212" fill="#F8FAFC" font-size="68" font-weight="850"><tspan>NANIM NO WORRY</tspan></text>
-  <text x="96" y="262" fill="#CBD5E1" font-size="27" font-weight="700"><tspan>Fertility treatment outcome prediction research</tspan></text>
+  <g data-title="true"><text x="96" y="118" fill="#38BDF8" font-size="18" font-weight="820" letter-spacing="4"><tspan>FERTILITY AI · EVIDENCE ASSAY</tspan></text></g>
+  <text x="96" y="210" fill="#F8FAFC" font-size="70" font-weight="850"><tspan>NANIM NO WORRY</tspan></text>
+  <text x="96" y="262" fill="#CBD5E1" font-size="26" font-weight="700"><tspan>Fertility treatment outcome prediction research</tspan></text>
   <text x="96" y="326" fill="#94A3B8" font-size="20"><tspan>Structural context → OOF validation → ensemble evidence</tspan></text>
-  <text x="96" y="364" fill="#64748B" font-size="18"><tspan>LG Aimers Cohort 6 · Phase2 · ROC-AUC · competition research</tspan></text>
+  <text x="96" y="362" fill="#64748B" font-size="17"><tspan>LG Aimers Cohort 6 · Phase2 · ROC-AUC · competition research</tspan></text>
 
   <g data-card-set="row" data-grid="16">
-    <g data-card="hero-badge-1"><rect x="96" y="448" width="192" height="64" rx="16" fill="#0F2236" stroke="#38BDF8"/><text data-role="primary" x="192" y="480" text-anchor="middle" dominant-baseline="middle" fill="#BAE6FD" font-size="14" font-weight="820"><tspan>STRUCTURAL CONTEXT</tspan></text></g>
-    <g data-card="hero-badge-2"><rect x="304" y="448" width="192" height="64" rx="16" fill="#17142A" stroke="#A78BFA"/><text data-role="primary" x="400" y="480" text-anchor="middle" dominant-baseline="middle" fill="#DDD6FE" font-size="16" font-weight="820"><tspan>OOF-FIRST</tspan></text></g>
-    <g data-card="hero-badge-3"><rect x="512" y="448" width="192" height="64" rx="16" fill="#271923" stroke="#FF7A66"/><text data-role="primary" x="608" y="480" text-anchor="middle" dominant-baseline="middle" fill="#FFD2CA" font-size="16" font-weight="820"><tspan>ENSEMBLE</tspan></text></g>
+    <g data-card="hero-badge-1">
+      <rect x="96" y="448" width="192" height="64" rx="16" fill="url(#chipCyan)" stroke="#38BDF8" stroke-opacity=".78"/>
+      <path d="M112 456 H272" stroke="#BAE6FD" stroke-opacity=".18"/>
+      <text data-role="primary" x="192" y="480" text-anchor="middle" dominant-baseline="middle" fill="#BAE6FD" font-size="14" font-weight="820"><tspan>STRUCTURAL CONTEXT</tspan></text>
+    </g>
+    <g data-card="hero-badge-2">
+      <rect x="304" y="448" width="192" height="64" rx="16" fill="url(#chipViolet)" stroke="#A78BFA" stroke-opacity=".82"/>
+      <path d="M320 456 H480" stroke="#DDD6FE" stroke-opacity=".17"/>
+      <text data-role="primary" x="400" y="480" text-anchor="middle" dominant-baseline="middle" fill="#DDD6FE" font-size="16" font-weight="820"><tspan>OOF-FIRST</tspan></text>
+    </g>
+    <g data-card="hero-badge-3">
+      <rect x="512" y="448" width="192" height="64" rx="16" fill="url(#chipCoral)" stroke="#FF7A66" stroke-opacity=".8"/>
+      <path d="M528 456 H688" stroke="#FFD2CA" stroke-opacity=".16"/>
+      <text data-role="primary" x="608" y="480" text-anchor="middle" dominant-baseline="middle" fill="#FFD2CA" font-size="16" font-weight="820"><tspan>ENSEMBLE</tspan></text>
+    </g>
   </g>
 </g>
 
 <g id="fx-zone" transform="translate(864 64)" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
-  <rect x="0" y="48" width="672" height="432" rx="28" fill="url(#glass)" stroke="#243249"/>
-  <path d="M32 152 H640 M32 264 H640 M32 376 H640" stroke="#94A3B8" stroke-width="1" opacity=".055"/>
-  <path d="M176 72 V456 M464 72 V456" stroke="#94A3B8" stroke-width="1" opacity=".055"/>
-  <text x="32" y="92" fill="#64748B" font-size="14" font-weight="800" letter-spacing="2"><tspan>CLINICAL SIGNAL ARRAY</tspan></text>
+  <rect x="0" y="48" width="672" height="432" rx="28" fill="url(#bay)" stroke="#2A3A51"/>
+  <rect x="8" y="56" width="656" height="416" rx="22" fill="none" stroke="#F8FAFC" stroke-opacity=".03"/>
 
-  <g data-motion-role="sweep"><rect x="-160" y="48" width="160" height="432" fill="url(#sweep)" opacity="0"><animate attributeName="x" values="-160;672;672" keyTimes="0;.62;1" dur="14s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.55;0" keyTimes="0;.48;1" dur="14s" repeatCount="indefinite"/></rect></g>
+  <g fill="#64748B" font-size="12" font-weight="820" letter-spacing="2">
+    <text x="32" y="92"><tspan>01 · SIGNALS</tspan></text>
+    <text x="288" y="92"><tspan>02 · MODEL LANES</tspan></text>
+    <text x="520" y="92"><tspan>03 · EVIDENCE</tspan></text>
+  </g>
+  <g opacity=".10" stroke="#94A3B8" stroke-width="1">
+    <path d="M32 112 H640"/><path d="M32 452 H640"/>
+    <path d="M232 112 V452"/><path d="M472 112 V452"/>
+  </g>
+
+  <g data-motion-role="sweep">
+    <rect x="-180" y="48" width="180" height="432" fill="url(#sweep)" opacity="0">
+      <animate attributeName="x" values="-180;672;672" keyTimes="0;.58;1" dur="18s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;.42;0" keyTimes="0;.46;1" dur="18s" repeatCount="indefinite"/>
+    </rect>
+  </g>
 
   <g data-card-set="stack" data-grid="16">
-    <g data-card="signal-age"><rect x="32" y="128" width="144" height="64" rx="16" fill="#0F2236" stroke="#24506D"/><text data-role="primary" x="104" y="160" text-anchor="middle" dominant-baseline="middle" fill="#E2E8F0" font-size="14" font-weight="780"><tspan>AGE</tspan></text></g>
-    <g data-card="signal-treatment"><rect x="32" y="208" width="144" height="64" rx="16" fill="#0F2236" stroke="#24506D"/><text data-role="primary" x="104" y="240" text-anchor="middle" dominant-baseline="middle" fill="#E2E8F0" font-size="14" font-weight="780"><tspan>TREATMENT</tspan></text></g>
-    <g data-card="signal-missing"><rect x="32" y="288" width="144" height="64" rx="16" fill="#271923" stroke="#8B4A41"/><text data-role="primary" x="104" y="320" text-anchor="middle" dominant-baseline="middle" fill="#FFD2CA" font-size="14" font-weight="780"><tspan>MISSINGNESS</tspan></text></g>
-    <g data-card="signal-history"><rect x="32" y="368" width="144" height="64" rx="16" fill="#0F2236" stroke="#24506D"/><text data-role="primary" x="104" y="400" text-anchor="middle" dominant-baseline="middle" fill="#E2E8F0" font-size="13" font-weight="780"><tspan>EMBRYO / HISTORY</tspan></text></g>
+    <g data-card="signal-age">
+      <rect x="32" y="128" width="144" height="64" rx="16" fill="#0E2233" stroke="#2D6688"/>
+      <text data-role="primary" x="104" y="160" text-anchor="middle" dominant-baseline="middle" fill="#DCEEF8" font-size="14" font-weight="780"><tspan>AGE</tspan></text>
+    </g>
+    <g data-card="signal-treatment">
+      <rect x="32" y="208" width="144" height="64" rx="16" fill="#0E2233" stroke="#2D6688"/>
+      <text data-role="primary" x="104" y="240" text-anchor="middle" dominant-baseline="middle" fill="#DCEEF8" font-size="14" font-weight="780"><tspan>TREATMENT</tspan></text>
+    </g>
+    <g data-card="signal-missing">
+      <rect x="32" y="288" width="144" height="64" rx="16" fill="#321D25" stroke="#A2574A"/>
+      <text data-role="primary" x="104" y="320" text-anchor="middle" dominant-baseline="middle" fill="#FFD5CD" font-size="14" font-weight="780"><tspan>MISSINGNESS</tspan></text>
+    </g>
+    <g data-card="signal-history">
+      <rect x="32" y="368" width="144" height="64" rx="16" fill="#0E2233" stroke="#2D6688"/>
+      <text data-role="primary" x="104" y="400" text-anchor="middle" dominant-baseline="middle" fill="#DCEEF8" font-size="13" font-weight="780"><tspan>EMBRYO / HISTORY</tspan></text>
+    </g>
   </g>
 
   <g stroke-width="2.5" fill="none">
@@ -50,34 +103,69 @@
     <path d="M176 240 H240" stroke="#38BDF8" opacity=".78"/>
     <path d="M176 320 H240" stroke="#FF7A66" opacity=".82"/>
     <path id="history-link" d="M176 400 H240" stroke="#38BDF8" opacity=".78"/>
-    <path id="signal-bus" d="M240 160 V400" stroke="#64748B" opacity=".62"/>
-    <path id="model-branches" d="M240 160 H272 M240 240 H272 M240 320 H272" stroke="#64748B" opacity=".72"/>
+    <path id="signal-bus" d="M240 160 V400" stroke="#70839B" opacity=".78"/>
+    <path id="model-branches" d="M240 160 H272 M240 240 H272 M240 320 H272" stroke="#70839B" opacity=".78"/>
   </g>
-  <g fill="#94A3B8" opacity=".8"><circle cx="240" cy="160" r="3"/><circle cx="240" cy="240" r="3"/><circle cx="240" cy="320" r="3"/><circle cx="240" cy="400" r="3"/></g>
+  <path d="M240 160 V400" stroke="#38BDF8" stroke-width="8" opacity=".035" filter="url(#softGlow)"/>
+  <g fill="#A8B6C7"><circle cx="240" cy="160" r="3.5"/><circle cx="240" cy="240" r="3.5"/><circle cx="240" cy="320" r="3.5"/><circle cx="240" cy="400" r="3.5"/></g>
 
   <g data-card-set="stack" data-grid="16">
-    <g data-card="model-cat"><rect x="272" y="128" width="176" height="64" rx="16" fill="#101A2B" stroke="#38BDF8"/><text data-role="primary" x="360" y="160" text-anchor="middle" dominant-baseline="middle" fill="#F8FAFC" font-size="14" font-weight="820"><tspan>CATBOOST</tspan></text></g>
-    <g data-card="model-lgb"><rect x="272" y="208" width="176" height="64" rx="16" fill="#17142A" stroke="#A78BFA"/><text data-role="primary" x="360" y="240" text-anchor="middle" dominant-baseline="middle" fill="#F8FAFC" font-size="14" font-weight="820"><tspan>LIGHTGBM</tspan></text></g>
-    <g data-card="model-xgb"><rect x="272" y="288" width="176" height="64" rx="16" fill="#101A2B" stroke="#38BDF8"/><text data-role="primary" x="360" y="320" text-anchor="middle" dominant-baseline="middle" fill="#F8FAFC" font-size="14" font-weight="820"><tspan>XGBOOST</tspan></text></g>
+    <g data-card="model-cat">
+      <rect x="272" y="128" width="176" height="64" rx="16" fill="#0F1D2C" stroke="#38BDF8"/>
+      <path d="M281 140 V180" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+      <text data-role="primary" x="360" y="160" text-anchor="middle" dominant-baseline="middle" fill="#F8FAFC" font-size="14" font-weight="820"><tspan>CATBOOST</tspan></text>
+    </g>
+    <g data-card="model-lgb">
+      <rect x="272" y="208" width="176" height="64" rx="16" fill="#19172F" stroke="#A78BFA"/>
+      <path d="M281 220 V260" stroke="#A78BFA" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+      <text data-role="primary" x="360" y="240" text-anchor="middle" dominant-baseline="middle" fill="#F8FAFC" font-size="14" font-weight="820"><tspan>LIGHTGBM</tspan></text>
+    </g>
+    <g data-card="model-xgb">
+      <rect x="272" y="288" width="176" height="64" rx="16" fill="#0F1D2C" stroke="#38BDF8"/>
+      <path d="M281 300 V340" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+      <text data-role="primary" x="360" y="320" text-anchor="middle" dominant-baseline="middle" fill="#F8FAFC" font-size="14" font-weight="820"><tspan>XGBOOST</tspan></text>
+    </g>
   </g>
 
-  <g stroke="url(#flow)" stroke-width="3" fill="none" opacity=".88"><path d="M448 160 C484 160 496 226 516 240"/><path d="M448 240 H516"/><path d="M448 320 C484 320 496 254 516 240"/></g>
+  <g stroke="url(#flow)" stroke-width="3" fill="none" opacity=".84">
+    <path d="M448 160 C482 160 494 224 516 240"/>
+    <path d="M448 240 H516"/>
+    <path d="M448 320 C482 320 494 256 516 240"/>
+  </g>
 
   <g data-motion-role="orbital" transform="translate(568 240)">
-    <circle r="132" fill="url(#aura)" opacity=".62"/>
-    <circle r="108" fill="none" stroke="#38BDF8" stroke-width="2" stroke-dasharray="14 14" opacity=".26"><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="24s" repeatCount="indefinite"/></circle>
-    <circle r="84" fill="none" stroke="#A78BFA" stroke-width="3" stroke-dasharray="34 14" opacity=".5"><animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="17s" repeatCount="indefinite"/></circle>
-    <g opacity=".42"><line x1="0" y1="-62" x2="0" y2="-112" stroke="#F8FAFC" stroke-width="2"/><circle cy="-112" r="4" fill="#F8FAFC"/><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="10.5s" repeatCount="indefinite"/></g>
+    <circle r="132" fill="url(#aura)" opacity=".55"/>
+    <circle r="112" fill="none" stroke="#38BDF8" stroke-width="1.6" stroke-dasharray="16 16" opacity=".24"><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="32s" repeatCount="indefinite"/></circle>
+    <circle r="88" fill="none" stroke="#A78BFA" stroke-width="2.6" stroke-dasharray="36 14" opacity=".48"><animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="22s" repeatCount="indefinite"/></circle>
+    <g opacity=".44">
+      <line x1="0" y1="-62" x2="0" y2="-114" stroke="#F8FAFC" stroke-width="1.8"/>
+      <circle cy="-114" r="4" fill="#F8FAFC"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="13s" repeatCount="indefinite"/>
+    </g>
+    <g stroke="#94A3B8" stroke-width="1" opacity=".17">
+      <line x1="-124" y1="0" x2="-114" y2="0"/><line x1="124" y1="0" x2="114" y2="0"/>
+      <line x1="0" y1="-124" x2="0" y2="-114"/><line x1="0" y1="124" x2="0" y2="114"/>
+      <line x1="-88" y1="-88" x2="-80" y2="-80"/><line x1="88" y1="-88" x2="80" y2="-80"/>
+      <line x1="-88" y1="88" x2="-80" y2="80"/><line x1="88" y1="88" x2="80" y2="80"/>
+    </g>
   </g>
-  <g data-motion-role="pulse"><circle cx="568" cy="240" r="58" fill="#0E1B2B" stroke="#A78BFA" stroke-width="3"/><circle cx="568" cy="240" r="18" fill="#F8FAFC" filter="url(#glow)" opacity=".88"><animate attributeName="r" values="16;21;16" dur="6.2s" repeatCount="indefinite"/><animate attributeName="opacity" values=".62;1;.62" dur="6.2s" repeatCount="indefinite"/></circle></g>
+
+  <g data-motion-role="pulse">
+    <circle cx="568" cy="240" r="58" fill="#0B1727" stroke="#A78BFA" stroke-width="3"/>
+    <circle cx="568" cy="240" r="18" fill="#F8FAFC" filter="url(#glow)" opacity=".88">
+      <animate attributeName="r" values="16;21;16" dur="7.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".62;1;.62" dur="7.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
 
   <g data-motion-role="particle">
-    <circle cy="160" r="5" fill="#38BDF8" filter="url(#glow)"><animate attributeName="cx" values="176;238" dur="5.2s" begin=".4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="5.2s" begin=".4s" repeatCount="indefinite"/></circle>
-    <circle cy="320" r="5" fill="#FF7A66" filter="url(#glow)"><animate attributeName="cx" values="176;238" dur="6.4s" begin="2.1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="6.4s" begin="2.1s" repeatCount="indefinite"/></circle>
-    <circle cy="240" r="5" fill="#A78BFA" filter="url(#glow)"><animate attributeName="cx" values="448;518" dur="4.8s" begin="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="4.8s" begin="1.2s" repeatCount="indefinite"/></circle>
+    <circle cy="160" r="4.5" fill="#38BDF8" filter="url(#glow)"><animate attributeName="cx" values="176;238" dur="8.2s" begin=".8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="8.2s" begin=".8s" repeatCount="indefinite"/></circle>
+    <circle cy="320" r="4.5" fill="#FF7A66" filter="url(#glow)"><animate attributeName="cx" values="176;238" dur="9.4s" begin="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="9.4s" begin="3s" repeatCount="indefinite"/></circle>
+    <circle cy="400" r="4.5" fill="#38BDF8" filter="url(#glow)"><animate attributeName="cx" values="176;238" dur="10.2s" begin="5.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="10.2s" begin="5.5s" repeatCount="indefinite"/></circle>
+    <circle cy="240" r="4.5" fill="#A78BFA" filter="url(#glow)"><animate attributeName="cx" values="448;518" dur="7.2s" begin="1.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="7.2s" begin="1.8s" repeatCount="indefinite"/></circle>
   </g>
 
-  <text x="504" y="400" fill="#E2E8F0" font-size="15" font-weight="820"><tspan>OOF EVIDENCE</tspan></text>
-  <text x="480" y="426" fill="#64748B" font-size="12"><tspan>signals converge · evidence resolves</tspan></text>
+  <text x="504" y="400" fill="#E2E8F0" font-size="15" font-weight="820" letter-spacing=".4"><tspan>OOF EVIDENCE</tspan></text>
+  <text x="504" y="424" fill="#64748B" font-size="12"><tspan>validated convergence</tspan></text>
 </g>
 </svg>

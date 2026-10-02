@@ -1,4 +1,7 @@
-<picture><source media="(max-width:640px) and (prefers-color-scheme:dark)" srcset="./assets/hero-mobile.svg"><source media="(max-width:640px) and (prefers-color-scheme:light)" srcset="./assets/hero-light-mobile.svg"><source media="(prefers-color-scheme:dark)" srcset="./assets/hero.svg"><source media="(prefers-color-scheme:light)" srcset="./assets/hero-light.svg"><img src="./assets/hero-light.svg" alt="NANIM"></picture>
+<picture>
+  <source media="(max-width: 640px)" srcset="./assets/hero-mobile.svg" />
+  <img src="./assets/hero.svg" width="100%" alt="NANIM NO WORRY fertility AI evidence assay" />
+</picture>
 
 <h1 align="center">난임걱정마삼조</h1>
 

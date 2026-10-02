@@ -1,19 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="992" viewBox="0 0 800 992" role="img" aria-labelledby="title desc">
-<title id="title">NANIM NO WORRY mobile evidence assay</title><desc id="desc">Dark-theme mobile evidence assay with optically centered card labels and slow layered evidence motion.</desc>
-<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111F"/><stop offset="1" stop-color="#17142A"/></linearGradient><radialGradient id="aura"><stop stop-color="#A78BFA" stop-opacity=".25"/><stop offset=".55" stop-color="#38BDF8" stop-opacity=".08"/><stop offset="1" stop-color="#38BDF8" stop-opacity="0"/></radialGradient><filter id="g" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="9" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
-<rect width="800" height="992" rx="32" fill="url(#bg)"/>
-<g data-motion-role="ambient"><circle cx="400" cy="808" r="176" fill="url(#aura)" opacity=".7"><animate attributeName="opacity" values=".56;.78;.56" dur="12s" repeatCount="indefinite"/></circle></g>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="992" viewBox="0 0 800 992" role="img" aria-labelledby="title desc" data-hero="canonical">
+<title id="title">NANIM NO WORRY — Mobile Evidence Assay</title>
+<desc id="desc">Canonical mobile evidence-assay panel with optically centered cards, slow orbital evidence motion, and an opaque self-contained dark navy surface suitable for any GitHub page theme.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#06101E"/><stop offset=".55" stop-color="#0A1423"/><stop offset="1" stop-color="#17142A"/></linearGradient>
+  <linearGradient id="chipCyan" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#15334A"/><stop offset="1" stop-color="#0C2032"/></linearGradient>
+  <linearGradient id="chipViolet" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#292044"/><stop offset="1" stop-color="#17162E"/></linearGradient>
+  <linearGradient id="chipCoral" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#3B2028"/><stop offset="1" stop-color="#24171E"/></linearGradient>
+  <radialGradient id="aura"><stop stop-color="#A78BFA" stop-opacity=".24"/><stop offset=".55" stop-color="#38BDF8" stop-opacity=".07"/><stop offset="1" stop-color="#38BDF8" stop-opacity="0"/></radialGradient>
+  <filter id="g" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect id="hero-panel" x="1" y="1" width="798" height="990" rx="32" fill="url(#bg)" stroke="#26364D" stroke-width="2"/>
+<rect x="10" y="10" width="780" height="972" rx="26" fill="none" stroke="#F8FAFC" stroke-opacity=".035"/>
+<g data-motion-role="ambient"><circle cx="400" cy="808" r="182" fill="url(#aura)" opacity=".64"><animate attributeName="opacity" values=".50;.70;.50" dur="14s" repeatCount="indefinite"/></circle></g>
+
 <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
-  <g data-title="true"><text x="64" y="84" fill="#38BDF8" font-size="26" font-weight="820" letter-spacing="2"><tspan>FERTILITY AI · EVIDENCE ASSAY</tspan></text></g><text x="64" y="160" fill="#F8FAFC" font-size="58" font-weight="850"><tspan>NANIM NO WORRY</tspan></text><text x="64" y="214" fill="#CBD5E1" font-size="28" font-weight="700"><tspan>Fertility outcome prediction research</tspan></text><text x="64" y="266" fill="#94A3B8" font-size="24"><tspan>Structural context → OOF validation → evidence</tspan></text>
+  <g data-title="true"><text x="64" y="84" fill="#38BDF8" font-size="24" font-weight="820" letter-spacing="2"><tspan>FERTILITY AI · EVIDENCE ASSAY</tspan></text></g>
+  <text x="64" y="160" fill="#F8FAFC" font-size="58" font-weight="850"><tspan>NANIM NO WORRY</tspan></text>
+  <text x="64" y="214" fill="#CBD5E1" font-size="28" font-weight="700"><tspan>Fertility outcome prediction research</tspan></text>
+  <text x="64" y="266" fill="#94A3B8" font-size="24"><tspan>Structural context → OOF validation → evidence</tspan></text>
+
   <g data-card-set="stack" data-grid="16">
-    <g data-card="mobile-signal"><rect x="64" y="320" width="672" height="96" rx="24" fill="#0F2236" stroke="#38BDF8"/><text data-role="primary" x="96" y="368" dominant-baseline="middle" fill="#BAE6FD" font-size="28" font-weight="780"><tspan>Clinical signals</tspan></text></g>
-    <g data-card="mobile-context"><rect x="64" y="432" width="672" height="96" rx="24" fill="#271923" stroke="#FF7A66"/><text data-role="primary" x="96" y="480" dominant-baseline="middle" fill="#FFD2CA" font-size="28" font-weight="780"><tspan>Structural missingness context</tspan></text></g>
-    <g data-card="mobile-models"><rect x="64" y="544" width="672" height="96" rx="24" fill="#17142A" stroke="#A78BFA"/><text data-role="primary" x="96" y="592" dominant-baseline="middle" fill="#DDD6FE" font-size="28" font-weight="780"><tspan>CatBoost · LightGBM · XGBoost</tspan></text></g>
+    <g data-card="mobile-signal">
+      <rect x="64" y="320" width="672" height="96" rx="24" fill="url(#chipCyan)" stroke="#38BDF8" stroke-opacity=".82"/>
+      <text data-role="primary" x="96" y="368" dominant-baseline="middle" fill="#BAE6FD" font-size="28" font-weight="780"><tspan>Clinical signals</tspan></text>
+    </g>
+    <g data-card="mobile-context">
+      <rect x="64" y="432" width="672" height="96" rx="24" fill="url(#chipCoral)" stroke="#FF7A66" stroke-opacity=".82"/>
+      <text data-role="primary" x="96" y="480" dominant-baseline="middle" fill="#FFD2CA" font-size="28" font-weight="780"><tspan>Structural missingness context</tspan></text>
+    </g>
+    <g data-card="mobile-models">
+      <rect x="64" y="544" width="672" height="96" rx="24" fill="url(#chipViolet)" stroke="#A78BFA" stroke-opacity=".84"/>
+      <text data-role="primary" x="96" y="592" dominant-baseline="middle" fill="#DDD6FE" font-size="28" font-weight="780"><tspan>CatBoost · LightGBM · XGBoost</tspan></text>
+    </g>
   </g>
-  <path d="M400 640 V688" stroke="#A78BFA" stroke-width="3" opacity=".65"/>
-  <g data-motion-role="particle"><circle cy="664" r="5" fill="#A78BFA" filter="url(#g)"><animate attributeName="cx" values="280;520" dur="5.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="5.8s" repeatCount="indefinite"/></circle></g>
-  <g data-motion-role="orbital" transform="translate(400 806)"><circle r="106" fill="none" stroke="#38BDF8" stroke-width="3" stroke-dasharray="14 14" opacity=".34"><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="24s" repeatCount="indefinite"/></circle><circle r="82" fill="none" stroke="#A78BFA" stroke-width="4" stroke-dasharray="32 12" opacity=".58"><animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="17s" repeatCount="indefinite"/></circle><g opacity=".4"><line x1="0" y1="-54" x2="0" y2="-106" stroke="#F8FAFC" stroke-width="3"/><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="10.5s" repeatCount="indefinite"/></g></g>
-  <g data-motion-role="pulse"><circle cx="400" cy="806" r="54" fill="#0E1B2B" stroke="#A78BFA" stroke-width="4"/><circle cx="400" cy="806" r="17" fill="#F8FAFC" filter="url(#g)"><animate attributeName="r" values="14;20;14" dur="6.2s" repeatCount="indefinite"/><animate attributeName="opacity" values=".58;1;.58" dur="6.2s" repeatCount="indefinite"/></circle></g>
-  <text x="302" y="950" fill="#F8FAFC" font-size="26" font-weight="820"><tspan>OOF EVIDENCE</tspan></text>
+
+  <path d="M400 640 V688" stroke="#A78BFA" stroke-width="3" opacity=".58"/>
+  <g data-motion-role="particle"><circle cy="664" r="4.5" fill="#A78BFA" filter="url(#g)"><animate attributeName="cx" values="288;512" dur="8.4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;0" dur="8.4s" repeatCount="indefinite"/></circle></g>
+
+  <g data-motion-role="orbital" transform="translate(400 806)">
+    <circle r="112" fill="none" stroke="#38BDF8" stroke-width="2.5" stroke-dasharray="14 14" opacity=".30"><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="30s" repeatCount="indefinite"/></circle>
+    <circle r="84" fill="none" stroke="#A78BFA" stroke-width="3.5" stroke-dasharray="34 12" opacity=".52"><animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="21s" repeatCount="indefinite"/></circle>
+    <g opacity=".42"><line x1="0" y1="-54" x2="0" y2="-110" stroke="#F8FAFC" stroke-width="2.5"/><circle cy="-110" r="4" fill="#F8FAFC"/><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="13s" repeatCount="indefinite"/></g>
+  </g>
+  <g data-motion-role="pulse">
+    <circle cx="400" cy="806" r="54" fill="#0B1727" stroke="#A78BFA" stroke-width="4"/>
+    <circle cx="400" cy="806" r="17" fill="#F8FAFC" filter="url(#g)"><animate attributeName="r" values="14;20;14" dur="7.2s" repeatCount="indefinite"/><animate attributeName="opacity" values=".60;1;.60" dur="7.2s" repeatCount="indefinite"/></circle>
+  </g>
+  <text x="400" y="950" text-anchor="middle" fill="#F8FAFC" font-size="26" font-weight="820" letter-spacing=".5"><tspan>OOF EVIDENCE</tspan></text>
 </g>
 </svg>
