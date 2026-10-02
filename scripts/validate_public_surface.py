@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import base64
 import json
 import re
 import sys
@@ -16,6 +17,7 @@ ORG = CONTRACT["organization"]
 HEADERS = {
     "Accept": "application/vnd.github+json",
     "User-Agent": "nanimnoworry-public-surface-validator",
+    "Cache-Control": "no-cache",
 }
 
 def fail(message: str) -> None:
@@ -31,6 +33,15 @@ def fetch_text(url: str) -> str:
 def fetch_json(url: str) -> dict:
     return json.loads(fetch_text(url))
 
+def fetch_repo_file(repo: str, path: str) -> str:
+    quoted = urllib.parse.quote(path, safe="/")
+    data = fetch_json(f"https://api.github.com/repos/{ORG}/{repo}/contents/{quoted}?ref=main")
+    if data.get("type") != "file" or not data.get("sha"):
+        fail(f"{repo}: expected file at {path}")
+    if data.get("encoding") != "base64" or not data.get("content"):
+        fail(f"{repo}: unsupported content encoding for {path}")
+    return base64.b64decode(data["content"]).decode("utf-8")
+
 def require(text: str, phrases: list[str], where: str) -> None:
     low = text.lower()
     for phrase in phrases:
@@ -39,8 +50,7 @@ def require(text: str, phrases: list[str], where: str) -> None:
 
 def ensure_path(repo: str, path: str) -> None:
     quoted = urllib.parse.quote(path, safe="/")
-    url = f"https://api.github.com/repos/{ORG}/{repo}/contents/{quoted}?ref=main"
-    data = fetch_json(url)
+    data = fetch_json(f"https://api.github.com/repos/{ORG}/{repo}/contents/{quoted}?ref=main")
     if not data.get("sha"):
         fail(f"{repo}: path has no blob/tree SHA: {path}")
 
@@ -56,11 +66,12 @@ def validate_profile() -> None:
             fail(f"Organization profile: private repository is linked publicly: {private_repo}")
 
 def validate_repo(repo: str, spec: dict) -> None:
-    readme = fetch_text(f"https://raw.githubusercontent.com/{ORG}/{repo}/main/README.md")
+    readme = fetch_repo_file(repo, "README.md")
     require(readme, spec["required_phrases"], f"{repo}/README.md")
     max_chars = int(spec["max_readme_chars"])
     if len(readme) > max_chars:
         fail(f"{repo}/README.md: editorial budget exceeded ({len(readme)} > {max_chars})")
+
     forbidden = ("thisisstress", "forest-green", "production adopted", "production model")
     for term in forbidden:
         if term in readme.lower():
@@ -98,6 +109,6 @@ def main() -> int:
 if __name__ == "__main__":
     try:
         raise SystemExit(main())
-    except (AssertionError, urllib.error.URLError, TimeoutError) as exc:
+    except (AssertionError, urllib.error.URLError, TimeoutError, UnicodeDecodeError, ValueError) as exc:
         print(f"public surface contract: FAIL — {exc}", file=sys.stderr)
         raise SystemExit(1)
