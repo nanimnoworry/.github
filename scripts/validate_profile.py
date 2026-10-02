@@ -7,13 +7,15 @@ import xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1]
 PROFILE=ROOT/"profile"; ASSETS=PROFILE/"assets"; README=PROFILE/"README.md"
 REQUIRED_ASSETS={
-"hero.svg","project-snapshot.svg","evidence-pipeline.svg","model-lineage.svg","validation-evidence.svg","repository-map.svg","footer-endcap.svg",
-"hero-mobile.svg","project-snapshot-mobile.svg","evidence-pipeline-mobile.svg","model-lineage-mobile.svg","validation-evidence-mobile.svg","repository-map-mobile.svg","footer-endcap-mobile.svg",
+"hero.svg","project-snapshot.svg","evidence-pipeline.svg","model-lineage.svg","repository-map.svg","footer-endcap.svg",
+"hero-mobile.svg","project-snapshot-mobile.svg","evidence-pipeline-mobile.svg","model-lineage-mobile.svg","repository-map-mobile.svg","footer-endcap-mobile.svg",
 }
 CANONICAL_FACTS={"0.74232","0.74231","PSP","BS","planB","Research-Papers","not a clinical diagnostic"}
 FORBIDDEN_PROFILE_TERMS={"thisisstress","Production adopted","production model"}
 FORBIDDEN_SVG_TERMS={"Arial","Times New Roman"}
 GRID=16.0
+MAX_README_CHARS=4800
+MAX_H2=7
 
 def fail(m): raise AssertionError(m)
 def number(v,where=""):
@@ -29,15 +31,19 @@ def validate_manifest():
     refs=set(re.findall(r"\./assets/([A-Za-z0-9._-]+\.svg)",text))
     if refs!=REQUIRED_ASSETS: fail(f"README/asset mismatch: refs={sorted(refs)}")
     if re.search(r"\.(png|jpe?g|gif|webp)(?:\)|\"|'|\s)",text,re.I): fail("raster asset reference found in profile README")
-    if text.count("<picture>")!=7 or text.count("max-width: 640px")!=7: fail("responsive picture contract failed")
+    if text.count("<picture>")!=6 or text.count("max-width: 640px")!=6: fail("responsive picture contract failed")
 
 def validate_readme():
     text=README.read_text(encoding="utf-8"); lower=text.lower()
+    if len(text)>MAX_README_CHARS: fail(f"editorial budget exceeded: {len(text)} > {MAX_README_CHARS}")
+    h2=re.findall(r"^##\s+",text,re.M)
+    if len(h2)>MAX_H2: fail(f"too many H2 sections: {len(h2)} > {MAX_H2}")
+    if text.count("<details>")<2: fail("technical detail disclosure budget missing")
     for fact in CANONICAL_FACTS:
         if fact.lower() not in lower: fail(f"canonical fact missing: {fact}")
     for term in FORBIDDEN_PROFILE_TERMS:
         if term.lower() in lower: fail(f"forbidden or ambiguous profile term: {term}")
-    order=["## 30-Second Path","## Project Snapshot","## Evidence Pipeline","## Model Journey","## Validation & Decision","## Repository System","## Team","## Research Scope"]
+    order=["## 30-Second Path","## Project Snapshot","## Evidence Pipeline","## Model Journey","## Repository System","## Team","## Research Scope"]
     pos=[text.find(x) for x in order]
     if any(x<0 for x in pos) or pos!=sorted(pos): fail("README reading order contract failed")
 
@@ -86,8 +92,8 @@ def main():
         if term in joined: fail(f"cross-project contamination: {term}")
     for p in sorted(ASSETS.glob("*.svg")): validate_svg(p)
     print("profile validator: PASS")
-    print("assets: 14 / responsive SVG-first / desktop 1600px + mobile 800px")
-    print("contracts: reading-order, responsive-manifest, XML, grid, title, safe-zone, motion, font-fallback, contamination")
+    print("assets: 12 / responsive SVG-first / desktop 1600px + mobile 800px")
+    print("editorial: <=4800 chars / <=7 H2 / technical details collapsed")
     return 0
 
 if __name__=="__main__":
