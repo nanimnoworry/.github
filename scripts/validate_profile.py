@@ -37,7 +37,7 @@ def validate_readme():
         if fact.lower() not in lower: fail(f"canonical fact missing: {fact}")
     for term in FORBIDDEN_PROFILE_TERMS:
         if term.lower() in lower: fail(f"forbidden or ambiguous profile term: {term}")
-    order=["## Start Here","## Project Snapshot","## Evidence Pipeline","## Model Journey","## Validation & Decision","## Repository System","## Team","## Research Scope"]
+    order=["## 30-Second Path","## Project Snapshot","## Evidence Pipeline","## Model Journey","## Validation & Decision","## Repository System","## Team","## Research Scope"]
     pos=[text.find(x) for x in order]
     if any(x<0 for x in pos) or pos!=sorted(pos): fail("README reading order contract failed")
 

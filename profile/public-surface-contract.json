@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "organization": "nanimnoworry",
+  "reading_order": [
+    "Organization",
+    "PSP",
+    "BS"
+  ],
+  "canonical_result": {
+    "metric": "ROC-AUC",
+    "highest_submitted": {
+      "plan": "Plan 2",
+      "auc": "0.74232"
+    },
+    "final_adopted_submission_model": {
+      "plan": "Plan 3",
+      "auc": "0.74231"
+    }
+  },
+  "repositories": {
+    "PSP": {
+      "visibility": "public",
+      "role": "official project SSOT",
+      "description": "LG Aimers fertility prediction research — structural missingness, OOF validation, boosting ensembles and reproducible model lineage.",
+      "required_phrases": [
+        "Official project SSOT",
+        "Highest submitted AUC",
+        "0.74232",
+        "Final adopted submission model",
+        "0.74231",
+        "Not a clinical diagnostic or medical decision system."
+      ],
+      "required_paths": [
+        "docs/model_lineage.md",
+        "deliverables/final_submission/MANIFEST.md",
+        "docs/PUBLIC_NOTEBOOK_SANITIZATION.md"
+      ],
+      "recommended_topics": [
+        "machine-learning",
+        "fertility",
+        "binary-classification",
+        "roc-auc",
+        "out-of-fold",
+        "ensemble-learning",
+        "catboost",
+        "lightgbm",
+        "xgboost",
+        "reproducibility"
+      ]
+    },
+    "BS": {
+      "visibility": "public",
+      "role": "Plan 3 OOF model bench",
+      "description": "Research workspace for Plan 3 fertility prediction models — 5-fold OOF and weighted/rank ensembles.",
+      "required_phrases": [
+        "not the official final artifact",
+        "OOF Model Bench",
+        "0.740085",
+        "0.739635",
+        "0.740039",
+        "0.740377",
+        "0.740384",
+        "0.74232",
+        "0.74231",
+        "Not a clinical diagnostic or medical decision system."
+      ],
+      "required_paths": [
+        "plan3_model_research.ipynb"
+      ],
+      "recommended_topics": [
+        "machine-learning",
+        "fertility",
+        "out-of-fold",
+        "ensemble-learning",
+        "catboost",
+        "lightgbm",
+        "xgboost",
+        "research-workspace"
+      ]
+    }
+  },
+  "private_repositories": [
+    "planB",
+    "Research-Papers"
+  ],
+  "manual_ui_target": {
+    "organization_display_name": "난임걱정마삼조",
+    "organization_description": "Fertility prediction research · structural missingness · OOF validation · reproducible model lineage",
+    "website": "https://dacon.io/competitions/official/236452",
+    "pinned_repositories": [
+      "PSP",
+      "BS"
+    ],
+    "unpin": [
+      ".github"
+    ],
+    "github_repo_description": "Organization profile and visual QA contracts for NANIM NO WORRY."
+  }
+}
