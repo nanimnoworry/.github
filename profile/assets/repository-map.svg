@@ -1,38 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="496" viewBox="0 0 1600 496" role="img" aria-labelledby="title desc">
   <title id="title">Repository system</title>
-  <desc id="desc">PSP is the public official project hub, BS is a public modeling workspace, and planB plus Research-Papers are private research and evidence repositories.</desc>
+  <desc id="desc">A centered official PSP card feeds three equal lower cards for BS, planB, and Research-Papers.</desc>
   <rect width="1600" height="496" rx="32" fill="#0B1220"/>
   <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
-    <g data-title="true">
-      <text x="80" y="72" fill="#F8FAFC" font-size="30" font-weight="820"><tspan>REPOSITORY SYSTEM</tspan></text>
-    </g>
-    <text x="80" y="108" fill="#64748B" font-size="17"><tspan>Public surface and internal research are intentionally separated.</tspan></text>
+    <g data-title="true"><text x="96" y="72" fill="#F8FAFC" font-size="30" font-weight="830"><tspan>REPOSITORY SYSTEM</tspan></text></g>
+    <text x="96" y="108" fill="#64748B" font-size="17"><tspan>Public surface and internal research are intentionally separated.</tspan></text>
 
-    <g data-grid="16">
-      <rect x="496" y="144" width="608" height="128" rx="24" fill="#0F2236" stroke="#38BDF8" stroke-width="3"/>
-      <rect x="80" y="320" width="432" height="112" rx="24" fill="#101A2B" stroke="#38BDF8"/>
-      <rect x="528" y="320" width="432" height="112" rx="24" fill="#111827" stroke="#475569"/>
-      <rect x="976" y="320" width="544" height="112" rx="24" fill="#111827" stroke="#475569"/>
-    </g>
+    <rect x="448" y="144" width="704" height="128" rx="24" fill="#0F2236" stroke="#38BDF8" stroke-width="3"/>
+    <text x="480" y="184" fill="#38BDF8" font-size="14" font-weight="820" letter-spacing="2"><tspan>PUBLIC · OFFICIAL PROJECT SSOT</tspan></text>
+    <text x="480" y="230" fill="#F8FAFC" font-size="34" font-weight="850"><tspan>PSP</tspan></text>
+    <text x="576" y="230" fill="#CBD5E1" font-size="18"><tspan>final result · model lineage · artifact provenance</tspan></text>
 
-    <text x="528" y="184" fill="#38BDF8" font-size="14" font-weight="820" letter-spacing="2"><tspan>PUBLIC · OFFICIAL PROJECT SSOT</tspan></text>
-    <text x="528" y="230" fill="#F8FAFC" font-size="34" font-weight="840"><tspan>PSP</tspan></text>
-    <text x="624" y="230" fill="#CBD5E1" font-size="18"><tspan>final result · model lineage · artifact provenance</tspan></text>
-
-    <path d="M640 272 C560 300 416 304 296 320" stroke="#334155" stroke-width="3" fill="none"/>
+    <path d="M640 272 C576 304 448 304 320 320" stroke="#334155" stroke-width="3" fill="none"/>
     <path d="M800 272 V320" stroke="#334155" stroke-width="3"/>
-    <path d="M960 272 C1056 300 1192 304 1248 320" stroke="#334155" stroke-width="3" fill="none"/>
+    <path d="M960 272 C1024 304 1152 304 1280 320" stroke="#334155" stroke-width="3" fill="none"/>
 
-    <text x="112" y="358" fill="#38BDF8" font-size="13" font-weight="800" letter-spacing="2"><tspan>PUBLIC · MODELING WORKSPACE</tspan></text>
-    <text x="112" y="398" fill="#F8FAFC" font-size="25" font-weight="800"><tspan>BS</tspan></text>
-    <text x="176" y="398" fill="#94A3B8" font-size="15"><tspan>Plan 3 related OOF / ensemble research</tspan></text>
-
-    <text x="560" y="358" fill="#94A3B8" font-size="13" font-weight="800" letter-spacing="2"><tspan>PRIVATE · POST-SUBMISSION</tspan></text>
-    <text x="560" y="398" fill="#F8FAFC" font-size="25" font-weight="800"><tspan>planB</tspan></text>
-    <text x="656" y="398" fill="#94A3B8" font-size="15"><tspan>reproduction · bootstrap · slice review</tspan></text>
-
-    <text x="1008" y="358" fill="#94A3B8" font-size="13" font-weight="800" letter-spacing="2"><tspan>PRIVATE · EVIDENCE ARCHIVE</tspan></text>
-    <text x="1008" y="398" fill="#F8FAFC" font-size="25" font-weight="800"><tspan>Research-Papers</tspan></text>
-    <text x="1232" y="398" fill="#94A3B8" font-size="15"><tspan>literature · presentation provenance</tspan></text>
+    <g data-card-row="true" data-grid="16">
+      <rect x="96" y="320" width="448" height="112" rx="24" fill="#101A2B" stroke="#38BDF8"/>
+      <rect x="576" y="320" width="448" height="112" rx="24" fill="#111827" stroke="#475569"/>
+      <rect x="1056" y="320" width="448" height="112" rx="24" fill="#111827" stroke="#475569"/>
+    </g>
+    <text x="128" y="358" fill="#38BDF8" font-size="13" font-weight="820" letter-spacing="2"><tspan>PUBLIC · MODELING WORKSPACE</tspan></text><text x="128" y="400" fill="#F8FAFC" font-size="25" font-weight="820"><tspan>BS</tspan></text><text x="192" y="400" fill="#94A3B8" font-size="15"><tspan>Plan 3 OOF / ensemble research</tspan></text>
+    <text x="608" y="358" fill="#94A3B8" font-size="13" font-weight="820" letter-spacing="2"><tspan>PRIVATE · POST-SUBMISSION</tspan></text><text x="608" y="400" fill="#F8FAFC" font-size="25" font-weight="820"><tspan>planB</tspan></text><text x="704" y="400" fill="#94A3B8" font-size="15"><tspan>bootstrap · slice review</tspan></text>
+    <text x="1088" y="358" fill="#94A3B8" font-size="13" font-weight="820" letter-spacing="2"><tspan>PRIVATE · EVIDENCE ARCHIVE</tspan></text><text x="1088" y="400" fill="#F8FAFC" font-size="23" font-weight="820"><tspan>Research-Papers</tspan></text><text x="1288" y="400" fill="#94A3B8" font-size="14"><tspan>literature · presentation provenance</tspan></text>
   </g>
 </svg>

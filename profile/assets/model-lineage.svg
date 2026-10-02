@@ -1,44 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="464" viewBox="0 0 1600 464" role="img" aria-labelledby="title desc">
   <title id="title">Official model journey</title>
-  <desc id="desc">Official project lineage: Plan 1 baseline, Plan 2 highest submitted score, Plan 3 final adopted submission model, followed by clearly separated post-submission research.</desc>
+  <desc id="desc">Four equal cards distinguish Plan 1, highest submitted Plan 2, final adopted Plan 3, and separate post-submission research.</desc>
   <rect width="1600" height="464" rx="32" fill="#0B1220"/>
   <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
-    <g data-title="true">
-      <text x="80" y="72" fill="#F8FAFC" font-size="30" font-weight="820"><tspan>MODEL JOURNEY</tspan></text>
+    <g data-title="true"><text x="96" y="72" fill="#F8FAFC" font-size="30" font-weight="830"><tspan>MODEL JOURNEY</tspan></text></g>
+    <text x="96" y="108" fill="#64748B" font-size="17"><tspan>Official submission lineage first · post-submission research stays outside the historical result.</tspan></text>
+    <path d="M248 264 H1352" stroke="#334155" stroke-width="4"/>
+    <g fill="#64748B"><path d="M432 264 l-14 -9 v18z"/><path d="M800 264 l-14 -9 v18z"/><path d="M1168 264 l-14 -9 v18z"/></g>
+    <g data-card-row="true" data-grid="16">
+      <rect x="96" y="160" width="304" height="208" rx="24" fill="#101A2B" stroke="#334155"/>
+      <rect x="464" y="160" width="304" height="208" rx="24" fill="#0F2236" stroke="#38BDF8" stroke-width="2"/>
+      <rect x="832" y="160" width="304" height="208" rx="24" fill="#17142A" stroke="#A78BFA" stroke-width="3"/>
+      <rect x="1200" y="160" width="304" height="208" rx="24" fill="#111827" stroke="#475569" stroke-dasharray="10 10"/>
     </g>
-    <text x="80" y="108" fill="#64748B" font-size="17"><tspan>Official submission lineage first · post-submission research stays outside the historical result.</tspan></text>
-
-    <path d="M248 254 H1312" stroke="#334155" stroke-width="4"/>
-    <g fill="#64748B"><path d="M512 254 l-14 -9 v18z"/><path d="M800 254 l-14 -9 v18z"/><path d="M1088 254 l-14 -9 v18z"/></g>
-
-    <g data-grid="16">
-      <rect x="80" y="160" width="320" height="176" rx="24" fill="#101A2B" stroke="#334155"/>
-      <rect x="416" y="160" width="320" height="176" rx="24" fill="#0F2236" stroke="#38BDF8" stroke-width="2"/>
-      <rect x="752" y="160" width="320" height="176" rx="24" fill="#17142A" stroke="#A78BFA" stroke-width="3"/>
-      <rect x="1088" y="160" width="432" height="176" rx="24" fill="#111827" stroke="#475569" stroke-dasharray="10 10"/>
-    </g>
-
-    <text x="112" y="208" fill="#94A3B8" font-size="14" font-weight="800" letter-spacing="2"><tspan>PLAN 1</tspan></text>
-    <text x="112" y="250" fill="#F8FAFC" font-size="24" font-weight="780"><tspan>OOF baseline</tspan></text>
-    <text x="112" y="294" fill="#CBD5E1" font-size="20"><tspan>Submission AUC 0.74213</tspan></text>
-
-    <text x="448" y="208" fill="#38BDF8" font-size="14" font-weight="800" letter-spacing="2"><tspan>PLAN 2 · HIGHEST SUBMITTED</tspan></text>
-    <text x="448" y="246" fill="#F8FAFC" font-size="21" font-weight="780"><tspan>Feature expansion</tspan></text>
-    <text x="448" y="274" fill="#F8FAFC" font-size="21" font-weight="780"><tspan>+ ensemble / stacking</tspan></text>
-    <text x="448" y="314" fill="#BAE6FD" font-size="22" font-weight="800"><tspan>0.74232</tspan></text>
-
-    <text x="784" y="208" fill="#A78BFA" font-size="14" font-weight="800" letter-spacing="2"><tspan>PLAN 3 · FINAL ADOPTED</tspan></text>
-    <text x="784" y="250" fill="#F8FAFC" font-size="24" font-weight="780"><tspan>OOF + Multi-Seed</tspan></text>
-    <text x="784" y="294" fill="#DDD6FE" font-size="22" font-weight="800"><tspan>0.74231</tspan></text>
-    <text x="784" y="322" fill="#94A3B8" font-size="14"><tspan>final adopted submission model</tspan></text>
-
-    <text x="1120" y="208" fill="#94A3B8" font-size="14" font-weight="800" letter-spacing="2"><tspan>AFTER THE OFFICIAL SUBMISSION</tspan></text>
-    <text x="1120" y="250" fill="#F8FAFC" font-size="24" font-weight="780"><tspan>planB research</tspan></text>
-    <text x="1120" y="286" fill="#94A3B8" font-size="16"><tspan>reproduction · bootstrap · slice review</tspan></text>
-    <text x="1120" y="314" fill="#64748B" font-size="14"><tspan>separate lineage · does not rewrite the official result</tspan></text>
-
-    <circle cx="912" cy="150" r="5" fill="#A78BFA">
-      <animate attributeName="opacity" values="0.35;1;0.35" dur="4.2s" repeatCount="indefinite"/>
-    </circle>
+    <text x="128" y="208" fill="#94A3B8" font-size="14" font-weight="820" letter-spacing="2"><tspan>PLAN 1</tspan></text><text x="128" y="254" fill="#F8FAFC" font-size="24" font-weight="800"><tspan>OOF baseline</tspan></text><text x="128" y="310" fill="#CBD5E1" font-size="19"><tspan>Submission 0.74213</tspan></text>
+    <text x="496" y="208" fill="#38BDF8" font-size="14" font-weight="820" letter-spacing="1.4"><tspan>PLAN 2 · HIGHEST</tspan></text><text x="496" y="244" fill="#F8FAFC" font-size="22" font-weight="800"><tspan>Feature expansion</tspan></text><text x="496" y="274" fill="#F8FAFC" font-size="22" font-weight="800"><tspan>+ ensemble / stacking</tspan></text><text x="496" y="326" fill="#BAE6FD" font-size="24" font-weight="850"><tspan>0.74232</tspan></text>
+    <text x="864" y="208" fill="#A78BFA" font-size="14" font-weight="820" letter-spacing="1.4"><tspan>PLAN 3 · FINAL</tspan></text><text x="864" y="254" fill="#F8FAFC" font-size="24" font-weight="800"><tspan>OOF + Multi-Seed</tspan></text><text x="864" y="306" fill="#DDD6FE" font-size="24" font-weight="850"><tspan>0.74231</tspan></text><text x="864" y="334" fill="#94A3B8" font-size="13"><tspan>final adopted submission model</tspan></text>
+    <text x="1232" y="208" fill="#94A3B8" font-size="13" font-weight="820" letter-spacing="1.4"><tspan>POST-SUBMISSION</tspan></text><text x="1232" y="250" fill="#F8FAFC" font-size="23" font-weight="800"><tspan>planB research</tspan></text><text x="1232" y="288" fill="#94A3B8" font-size="14"><tspan>reproduction · bootstrap</tspan></text><text x="1232" y="312" fill="#94A3B8" font-size="14"><tspan>slice review · separate lineage</tspan></text>
+    <circle cx="984" cy="148" r="5" fill="#A78BFA"><animate attributeName="opacity" values="0.3;1;0.3" dur="4.2s" repeatCount="indefinite"/></circle>
   </g>
 </svg>
