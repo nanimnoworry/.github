@@ -38,6 +38,8 @@ jobs:
           timeout 45s "$CHROME" --headless --disable-gpu --disable-dev-shm-usage --no-sandbox --hide-scrollbars --allow-file-access-from-files             --window-size=1680,760 --screenshot="$PWD/qa/hero-theme-dark.png" "file://$PWD/qa/hero-theme-dark.html"
           timeout 45s "$CHROME" --headless --disable-gpu --disable-dev-shm-usage --no-sandbox --hide-scrollbars --allow-file-access-from-files             --window-size=880,1120 --screenshot="$PWD/qa/hero-theme-light-mobile.png" "file://$PWD/qa/hero-theme-light-mobile.html"
           timeout 45s "$CHROME" --headless --disable-gpu --disable-dev-shm-usage --no-sandbox --hide-scrollbars --allow-file-access-from-files             --window-size=880,1120 --screenshot="$PWD/qa/hero-theme-dark-mobile.png" "file://$PWD/qa/hero-theme-dark-mobile.html"
+          timeout 45s "$CHROME" --headless --disable-gpu --disable-dev-shm-usage --no-sandbox --hide-scrollbars --allow-file-access-from-files             --window-size=1680,760 --screenshot="$PWD/qa/hero-switch-light.png" "file://$PWD/qa/hero-theme-switcher.html"
+          timeout 45s "$CHROME" --headless --disable-gpu --disable-dev-shm-usage --no-sandbox --hide-scrollbars --allow-file-access-from-files --force-dark-mode             --window-size=1680,760 --screenshot="$PWD/qa/hero-switch-dark.png" "file://$PWD/qa/hero-theme-switcher.html"
       - name: Upload visual QA evidence
         uses: actions/upload-artifact@v4
         with:
@@ -53,6 +55,7 @@ jobs:
             qa/hero-theme-dark.html
             qa/hero-theme-light-mobile.html
             qa/hero-theme-dark-mobile.html
+            qa/hero-theme-switcher.html
             qa/contact-sheet.png
             qa/mobile-sheet.png
             qa/alignment-sheet.png
@@ -63,4 +66,6 @@ jobs:
             qa/hero-theme-dark.png
             qa/hero-theme-light-mobile.png
             qa/hero-theme-dark-mobile.png
+            qa/hero-switch-light.png
+            qa/hero-switch-dark.png
           if-no-files-found: error

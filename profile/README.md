@@ -1,5 +1,4 @@
-<picture><source media="(max-width:640px)" srcset="./assets/hero-light-mobile.svg#gh-light-mode-only"><img src="./assets/hero-light.svg#gh-light-mode-only" width="100%" alt="NANIM NO WORRY · light"></picture>
-<picture><source media="(max-width:640px)" srcset="./assets/hero-mobile.svg#gh-dark-mode-only"><img src="./assets/hero.svg#gh-dark-mode-only" width="100%" alt="NANIM NO WORRY · dark"></picture>
+<picture><source media="(max-width:640px) and (prefers-color-scheme:dark)" srcset="./assets/hero-mobile.svg"><source media="(max-width:640px) and (prefers-color-scheme:light)" srcset="./assets/hero-light-mobile.svg"><source media="(prefers-color-scheme:dark)" srcset="./assets/hero.svg"><source media="(prefers-color-scheme:light)" srcset="./assets/hero-light.svg"><img src="./assets/hero-light.svg" alt="NANIM"></picture>
 
 <h1 align="center">난임걱정마삼조</h1>
 
