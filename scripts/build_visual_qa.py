@@ -40,7 +40,7 @@ def motion_page(seconds):
 def github_context(bg,label):
     border="#D0D7DE" if bg=="#FFFFFF" else "#30363D"
     fg="#57606A" if bg=="#FFFFFF" else "#8B949E"
-    return f'''<!doctype html><html><head><meta charset="utf-8"><style>*{{box-sizing:border-box}}html,body{{margin:0;background:{bg}}}main{{width:980px;margin:28px auto;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}}.readme{{border:1px solid {border};border-radius:8px;padding:24px;background:{bg}}.label{{font-size:12px;font-weight:800;letter-spacing:.08em;color:{fg};margin-bottom:12px}}img{{display:block;width:100%;height:auto}}</style></head><body><main><div class="readme"><div class="label">{label}</div><img src="../profile/assets/hero.svg" alt="{label}"></div></main></body></html>'''
+    return f'''<!doctype html><html><head><meta charset="utf-8"><style>*{{box-sizing:border-box}}html,body{{margin:0;background:{bg}}}main{{width:980px;margin:28px auto;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}}.readme{{border:1px solid {border};border-radius:8px;padding:24px;background:{bg}}}.label{{font-size:12px;font-weight:800;letter-spacing:.08em;color:{fg};margin-bottom:12px}}img{{display:block;width:100%;height:auto}}</style></head><body><main><div class="readme"><div class="label">{label}</div><img src="../profile/assets/hero.svg" alt="{label}"></div></main></body></html>'''
 
 (QA/"hero-context-light.html").write_text(github_context("#FFFFFF","CANONICAL HERO · LIGHT GITHUB PAGE"),encoding="utf-8")
 (QA/"hero-context-dark.html").write_text(github_context("#0D1117","CANONICAL HERO · DARK GITHUB PAGE"),encoding="utf-8")
@@ -48,7 +48,7 @@ def github_context(bg,label):
 def mobile_context(bg,label):
     border="#D0D7DE" if bg=="#FFFFFF" else "#30363D"
     fg="#57606A" if bg=="#FFFFFF" else "#8B949E"
-    return f'''<!doctype html><html><head><meta charset="utf-8"><style>*{{box-sizing:border-box}}html,body{{margin:0;background:{bg}}}main{{width:390px;margin:18px auto;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}}.readme{{border:1px solid {border};border-radius:8px;padding:10px;background:{bg}}.label{{font-size:11px;font-weight:800;letter-spacing:.06em;color:{fg};margin-bottom:8px}}img{{display:block;width:100%;height:auto}}</style></head><body><main><div class="readme"><div class="label">{label}</div><img src="../profile/assets/hero-mobile.svg" alt="{label}"></div></main></body></html>'''
+    return f'''<!doctype html><html><head><meta charset="utf-8"><style>*{{box-sizing:border-box}}html,body{{margin:0;background:{bg}}}main{{width:390px;margin:18px auto;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}}.readme{{border:1px solid {border};border-radius:8px;padding:10px;background:{bg}}}.label{{font-size:11px;font-weight:800;letter-spacing:.06em;color:{fg};margin-bottom:8px}}img{{display:block;width:100%;height:auto}}</style></head><body><main><div class="readme"><div class="label">{label}</div><img src="../profile/assets/hero-mobile.svg" alt="{label}"></div></main></body></html>'''
 
 (QA/"hero-context-light-mobile.html").write_text(mobile_context("#FFFFFF","MOBILE HERO · LIGHT PAGE"),encoding="utf-8")
 (QA/"hero-context-dark-mobile.html").write_text(mobile_context("#0D1117","MOBILE HERO · DARK PAGE"),encoding="utf-8")
