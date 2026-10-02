@@ -17,6 +17,9 @@ def page(mobile=False,grid=False):
 (QA/"mobile-sheet.html").write_text(page(True,False),encoding="utf-8")
 (QA/"alignment-sheet.html").write_text(page(False,True),encoding="utf-8")
 (QA/"alignment-mobile.html").write_text(page(True,True),encoding="utf-8")
-hero_motion='''<!doctype html><html><head><meta charset="utf-8"><style>*{box-sizing:border-box}html,body{margin:0;background:#E8EDF4}main{width:1600px;margin:32px auto}.frame{background:white;padding:18px;border:1px solid #CBD5E1;border-radius:20px}.label{font:800 12px system-ui;color:#64748B;letter-spacing:.08em;margin-bottom:10px}img{display:block;width:100%;height:auto;border-radius:12px}</style></head><body><main><div class="frame"><div class="label">HERO MOTION TEMPORAL QA</div><img src="../profile/assets/hero.svg" alt="Hero motion QA"></div></main></body></html>'''
-(QA/"hero-motion.html").write_text(hero_motion,encoding="utf-8")
-print("visual + alignment + temporal motion QA pages generated")
+hero_svg=(ROOT/"profile"/"assets"/"hero.svg").read_text(encoding="utf-8")
+def motion_page(seconds):
+    return f'''<!doctype html><html><head><meta charset="utf-8"><style>*{{box-sizing:border-box}}html,body{{margin:0;background:#E8EDF4}}main{{width:1600px;margin:32px auto}}.frame{{background:white;padding:18px;border:1px solid #CBD5E1;border-radius:20px}}.label{{font:800 12px system-ui;color:#64748B;letter-spacing:.08em;margin-bottom:10px}}svg{{display:block;width:100%;height:auto;border-radius:12px}}</style></head><body onload="document.querySelector('svg').setCurrentTime({seconds})"><main><div class="frame"><div class="label">HERO MOTION · t={seconds}s</div>{hero_svg}</div></main></body></html>'''
+(QA/"hero-motion-t0.html").write_text(motion_page(0),encoding="utf-8")
+(QA/"hero-motion-t6.html").write_text(motion_page(6),encoding="utf-8")
+print("visual + alignment + deterministic temporal motion QA pages generated")
