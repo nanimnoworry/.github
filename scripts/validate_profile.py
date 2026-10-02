@@ -138,6 +138,7 @@ def validate_svg(path):
     validate_card_sets(root,ns,path)
     validate_motion(root,ns,path)
     if path.name=="hero.svg":
+        if root.attrib.get("data-hero")!="canonical": fail("hero.svg: canonical Hero marker missing")
         safe=root.find(".//svg:rect[@id='text-safe-zone']",ns); fx=root.find(".//svg:g[@id='fx-zone']",ns)
         if safe is None or fx is None: fail("hero.svg: safe/fx zone missing")
         right=number(safe.attrib.get("x"))+number(safe.attrib.get("width"))
@@ -151,8 +152,11 @@ def validate_svg(path):
         if bus.attrib.get("d")!="M240 160 V400": fail("hero.svg: collector bus geometry drift")
         panel=root.find(".//svg:rect[@id='hero-panel']",ns)
         if panel is None or not panel.attrib.get("stroke"): fail("hero.svg: canonical panel boundary missing")
+        for t in root.findall(".//svg:g[@data-card-set]//svg:text[@data-role='primary']",ns):
+            if t.attrib.get("dominant-baseline")!="middle": fail("hero.svg: single-line card text must use dominant-baseline=middle")
     card_sizes=[float(t.attrib["font-size"]) for s in root.findall(".//svg:g[@data-card-set]",ns) for c in s.findall("svg:g[@data-card]",ns) for t in c.findall("svg:text",ns) if t.attrib.get("font-size")]
     if path.name=="hero-mobile.svg":
+        if root.attrib.get("data-hero")!="canonical": fail("hero-mobile.svg: canonical Hero marker missing")
         panel=root.find(".//svg:rect[@id='hero-panel']",ns)
         if panel is None or not panel.attrib.get("stroke"): fail("hero-mobile.svg: canonical panel boundary missing")
     if path.name.endswith("-mobile.svg"):

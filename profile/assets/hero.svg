@@ -112,17 +112,17 @@
   <g data-card-set="stack" data-grid="16">
     <g data-card="model-cat">
       <rect x="272" y="128" width="176" height="64" rx="16" fill="#0F1D2C" stroke="#38BDF8"/>
-      <rect x="280" y="136" width="3" height="48" rx="1.5" fill="#38BDF8" opacity=".9"/>
+      <path d="M281 140 V180" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" opacity=".9"/>
       <text data-role="primary" x="360" y="160" text-anchor="middle" dominant-baseline="middle" fill="#F8FAFC" font-size="14" font-weight="820"><tspan>CATBOOST</tspan></text>
     </g>
     <g data-card="model-lgb">
       <rect x="272" y="208" width="176" height="64" rx="16" fill="#19172F" stroke="#A78BFA"/>
-      <rect x="280" y="216" width="3" height="48" rx="1.5" fill="#A78BFA" opacity=".9"/>
+      <path d="M281 220 V260" stroke="#A78BFA" stroke-width="3" stroke-linecap="round" opacity=".9"/>
       <text data-role="primary" x="360" y="240" text-anchor="middle" dominant-baseline="middle" fill="#F8FAFC" font-size="14" font-weight="820"><tspan>LIGHTGBM</tspan></text>
     </g>
     <g data-card="model-xgb">
       <rect x="272" y="288" width="176" height="64" rx="16" fill="#0F1D2C" stroke="#38BDF8"/>
-      <rect x="280" y="296" width="3" height="48" rx="1.5" fill="#38BDF8" opacity=".9"/>
+      <path d="M281 300 V340" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" opacity=".9"/>
       <text data-role="primary" x="360" y="320" text-anchor="middle" dominant-baseline="middle" fill="#F8FAFC" font-size="14" font-weight="820"><tspan>XGBOOST</tspan></text>
     </g>
   </g>
